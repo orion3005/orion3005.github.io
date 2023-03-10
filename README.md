@@ -145,54 +145,6 @@
         }
       ]
     },
-    {
-      "title": "Crypto",
-      "symbols": [
-        {
-          "s": "CRYPTOCAP:BTC"
-        },
-        {
-          "s": "CRYPTOCAP:ETH"
-        },
-        {
-          "s": "CRYPTOCAP:BNB"
-        },
-        {
-          "s": "CRYPTOCAP:LTC"
-        },
-        {
-          "s": "CRYPTOCAP:UNI"
-        },
-        {
-          "s": "CRYPTOCAP:TOTAL"
-        },
-        {
-          "s": "CRYPTOCAP:TOTAL2"
-        },
-        {
-          "s": "CRYPTOCAP:TOTAL3"
-        },
-        {
-          "s": "CRYPTOCAP:TOTALDEFI"
-        },
-        {
-          "s": "CRYPTOCAP:BTC.D"
-        },
-        {
-          "s": "CRYPTOCAP:ETH.D"
-        },
-        {
-          "s": "CRYPTOCAP:BNB.D"
-        },
-        {
-          "s": "INDEX:BTCUSD"
-        },
-        {
-          "s": "INDEX:ETHUSD"
-        },
-        {
-          "s": "BINANCE:BNBUSDT"
-        }
       ]
     }
   ]
