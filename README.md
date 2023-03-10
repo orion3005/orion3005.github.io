@@ -6,8 +6,8 @@
   {
   "colorTheme": "dark",
   "isTransparent": false,
-  "width": "620",
-  "height": "600",
+  "width": "1000",
+  "height": "620",
   "locale": "en",
   "importanceFilter": "0,1",
   "currencyFilter": "AUD,USD,CAD,EUR,FRF,DEM,ITL,JPY,MXN,NZD,ZAR,ESP,CHF,TRL,GBP"
@@ -30,8 +30,8 @@
   "isTransparent": false,
   "showSymbolLogo": true,
   "showFloatingTooltip": false,
-  "width": "620",
-  "height": "600",
+  "width": "1000",
+  "height": "620",
   "plotLineColorGrowing": "rgba(73, 133, 231, 1)",
   "plotLineColorFalling": "rgba(73, 133, 231, 1)",
   "gridLineColor": "rgba(240, 243, 250, 0)",
