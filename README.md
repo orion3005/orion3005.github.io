@@ -49,13 +49,7 @@
           "s": "VANTAGE:SP500"
         },
         {
-          "s": "TVC:VIX"
-        },
-        {
           "s": "CURRENCYCOM:US30"
-        },
-        {
-          "s": "TVC:TNX"
         },
         {
           "s": "AMEX:SCHZ"
@@ -71,30 +65,6 @@
     {
       "title": "Currencies",
       "symbols": [
-        {
-          "s": "ICEUS:DX1!"
-        },
-        {
-          "s": "TVC:ZXY"
-        },
-        {
-          "s": "TVC:AXY"
-        },
-        {
-          "s": "TVC:SXY"
-        },
-        {
-          "s": "TVC:JXY"
-        },
-        {
-          "s": "TVC:CXY"
-        },
-        {
-          "s": "TVC:BXY"
-        },
-        {
-          "s": "TVC:EXY"
-        },
         {
           "s": "FX:AUDCAD"
         },
