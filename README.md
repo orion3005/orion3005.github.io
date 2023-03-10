@@ -6,7 +6,7 @@
   {
   "colorTheme": "dark",
   "isTransparent": false,
-  "width": "510",
+  "width": "620",
   "height": "600",
   "locale": "en",
   "importanceFilter": "0,1",
@@ -31,7 +31,7 @@
   "showSymbolLogo": true,
   "showFloatingTooltip": false,
   "width": "620",
-  "height": "1080",
+  "height": "600",
   "plotLineColorGrowing": "rgba(73, 133, 231, 1)",
   "plotLineColorFalling": "rgba(73, 133, 231, 1)",
   "gridLineColor": "rgba(240, 243, 250, 0)",
