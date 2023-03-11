@@ -6,7 +6,7 @@
   {
   "colorTheme": "dark",
   "isTransparent": false,
-  "width": "1000",
+  "width": "620",
   "height": "620",
   "locale": "en",
   "importanceFilter": "0,1",
@@ -24,7 +24,7 @@
   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank"><span class="blue-text">Crypto markets</span></a> by TradingView</div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
   {
-  "width": 1000,
+  "width": 620,
   "height": "620",
   "defaultColumn": "overview",
   "screener_type": "crypto_mkt",
