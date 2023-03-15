@@ -1,0 +1,43 @@
+.quote {
+  align-self: flex-end;
+  padding: 15px 15px 10px;
+  border: 1px solid var(--border-color--lighter);
+  border-radius: 4px;
+  font-family: var(--secondary-family);
+  font-weight: 400;
+  @include fsz(16px);
+  line-height: 1.875;
+  color: var(--color-primary);
+  background-color: transparent;
+
+  [data-theme="background"] & {
+    background-color: rgba(black, 0.1);
+  }
+  @media #{$mq-1400-down} {
+    @include fsz(14px);
+  }
+  @media screen and (max-height: 550px) {
+    font-size: 0.95rem;
+    @include fsz(14px);
+  }
+  p:last-child {
+    margin: 0;
+  }
+
+  &__author {
+    font-weight: 500;
+    position: relative;
+    padding-left: 44px;
+    &:before {
+      content: "";
+      height: 1px;
+      background-color: var(--border-color--lighter);
+      display: block;
+      width: 20px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+}

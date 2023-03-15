@@ -1,0 +1,180 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  overflow: hidden;
+  height: -webkit-fill-available;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+.App {
+  font-size: 100%;
+  margin: 0;
+  color: var(--font-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: var(--primary-family);
+}
+
+.App {
+  background-color: var(--background-color);
+  background-size: cover;
+  background-position: center;
+  background-color: var(--background-color);
+  background-image: var(--background-gradient);
+  height: -webkit-fill-available;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+[data-theme="background"].App {
+  background-image: none;
+  background-color: rgb(10, 10, 10);
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+
+  &:hover {
+    color: var(--font-color);
+    opacity: 0.9;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+
+.error-alert {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+
+  &__inner {
+    background-color: rgba(#000, 0.8);
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+    max-width: 720px;
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__action {
+    margin-top: 30px;
+
+    > * {
+      margin: 0 12px !important;
+    }
+  }
+}
+
+.entry-content {
+  color: var(--primary-light);
+  line-height: 1.75;
+
+  *:first-child {
+    margin-top: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 3rem 0 1rem;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 3.052rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 2.441rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 1.953rem;
+  }
+
+  h4 {
+    font-size: 1.563rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: var(--primary-light);
+    text-decoration: underline;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+.social-list {
+  display: flex;
+
+  > li {
+    margin: 0 10px 0 0;
+  }
+}
