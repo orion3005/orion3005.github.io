@@ -8,7 +8,7 @@ function dateTime() {
 
 function weatherBalloon(cityID) {
 	var apiKey = 'f82538e6b682e99f920385241e7a079f'; //OpenWeather API key
-	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + apiKey + '&units=imperial' )
+	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + apiKey )
 		.then(function(resp) {
 			return resp.json()
 		})
@@ -17,7 +17,7 @@ function weatherBalloon(cityID) {
 			let tempK = parseFloat(data.main.temp);
 			let tempC = Math.round(tempK - 273.15);
 			let tempF = Math.round((tempK - 273.15) * 1.8) + 32;
-			document.getElementById('weather').innerHTML = '<p id="location">' + data.name + '</p><p id="details" ' + 'title="' + tempF + '&deg;F">' + '<img src="https://openweathermap.org/img/wn/' + weatherIcon + '.png">' + data.weather[0].description + '<span class="separator">|</span>' + tempC + '&deg;C</p>';
+			document.getElementById('weather').innerHTML = '<p id="location">' + data.name + '</p><p id="details" ' + 'title="' + tempC + '&deg;C">' + '<img src="https://openweathermap.org/img/wn/' + weatherIcon + '.png">' + data.weather[0].description + '<span class="separator">|</span>' + tempF + '&deg;F</p>';
 		});
 }
 
