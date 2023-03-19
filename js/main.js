@@ -1,9 +1,9 @@
 function dateTime() {
 	const date = new Date();
 	let today = date.toDateString();
-	let time = date.toLocaleTimeString({
+	let time = date.toLocaleTimeString('en-US', {
 		hour12: false,
-	}
+	}),
 	);
 	document.getElementById('date-time').innerHTML = '<p id="date">' + today + '</p><p id="time">' + time + '</p>';
 	setTimeout(dateTime, 1000);
