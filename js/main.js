@@ -8,7 +8,7 @@ function dateTime() {
 
 function weatherBalloon(cityID) {
 	var apiKey = 'f82538e6b682e99f920385241e7a079f'; //OpenWeather API key
-	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + apiKey)
+	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + apiKey + &units=imperial)
 		.then(function(resp) {
 			return resp.json()
 		})
