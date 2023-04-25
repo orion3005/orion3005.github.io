@@ -1,9 +1,9 @@
 function dateTime() {
-	const date = new Date();
-	let today = date.toDateString();
-	let time = date.toLocaleTimeString();
-	document.getElementById('date-time').innerHTML = '<p id="date">' + today + '</p><p id="time">' + time + '</p>';
-	setTimeout(dateTime, 1000);
+    const date = new Date();
+    let today = date.toDateString();
+    let time = date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+    document.getElementById('date-time').innerHTML = '<p id="date">' + today + '</p><p id="time">' + time + '</p>';
+    setTimeout(dateTime, 1000);
 }
 
 function weatherBalloon(cityID) {
