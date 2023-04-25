@@ -6,9 +6,11 @@
       /* Center the contents of the body element */
       body {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        margin: 0;
       }
       
       /* Optional styling for the h1 element */
@@ -17,9 +19,44 @@
         text-align: center;
         margin-bottom: 24px;
       }
+      
+      /* Navigation bar styles */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 16px;
+        background-color: #333;
+        color: #fff;
+      }
+      
+      /* Home button styles */
+      .home-button {
+        display: flex;
+        align-items: center;
+        height: 32px;
+      }
+      
+      /* Home button image styles */
+      .home-button img {
+        height: 100%;
+      }
     </style>
   </head>
   <body>
+    <!-- Navigation bar with home button -->
+    <nav class="navbar">
+      <div class="home-button">
+        <a href="#">
+          <img src="https://raw.githubusercontent.com/orion3005/orion3005.github.io/main/Pets_Marshy.png" alt="Home">
+        </a>
+      </div>
+      <div>
+        <!-- Add more navigation links here -->
+      </div>
+    </nav>
+    
     <div>
       <h1>"Prudence dictates exiting winning positions long before the highs"</h1>
 
