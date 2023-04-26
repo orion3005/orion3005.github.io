@@ -1,35 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@orion3005 
-orion3005
-/
-orion3005.github.io
-Public
-Cannot fork because you own this repository and are not a member of any organizations.
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Settings
-Beta Try the new code view
-orion3005.github.io/widgets.html
-@orion3005
-orion3005 Update widgets.html
-Latest commit 33f496b 18 minutes ago
- History
- 1 contributor
-67 lines (61 sloc)  1.82 KB
- 
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -74,6 +42,15 @@ Latest commit 33f496b 18 minutes ago
       .home-button img {
         height: 100%;
       }
+      
+      /* World time section styles */
+      #world-time {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 16px;
+        background-color: #f2f2f2;
+      }
     </style>
   </head>
   <body>
@@ -88,6 +65,49 @@ Latest commit 33f496b 18 minutes ago
         <!-- Add more navigation links here -->
       </div>
     </nav>
+    
+    <header>
+      <h1>"Prudence dictates exiting winning positions long before the highs"</h1>
+      
+      <!-- World time section -->
+      <section id="world-time">
+        <div>
+          <h2>New York</h2>
+          <p id="new-york-time"></p>
+        </div>
+        <div>
+          <h2>Sydney</h2>
+          <p id="sydney-time"></p>
+        </div>
+        <div>
+          <h2>Tokyo</h2>
+          <p id="tokyo-time"></p>
+        </div>
+        <div>
+          <h2>Beijing</h2>
+          <p id="beijing-time"></p>
+        </div>
+      </section>
+    </header>
+
+    <script>
+      // New York time
+      setInterval(() => {
+        const newYorkTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour12: false });
+        document.getElementById('new-york-time').textContent = newYorkTime;
+      }, 1000);
+
+      // Sydney time
+      setInterval(() => {
+        const sydneyTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Australia/Sydney', hour12: false });
+        document.getElementById('sydney-time').textContent = sydneyTime;
+      }, 1000);
+
+      // Tokyo time
+      setInterval(() => {
+        const tokyoTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Tokyo', hour12: false });
+        document.getElementById('tokyo-time').textContent = toky
+
     
     <div>
       <h1>"Prudence dictates exiting winning positions long before the highs"</h1>
