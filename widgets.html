@@ -60,6 +60,29 @@
     <div>
       <h1>"Prudence dictates exiting winning positions long before the highs"</h1>
 
+      <section id="world-clock">
+        <h2>World Clock</h2>
+        <ul>
+          <li><span>New York:</span> <span id="new-york"></span></li>
+          <li><span>Sydney:</span> <span id="sydney"></span></li>
+          <li><span>Tokyo:</span> <span id="tokyo"></span></li>
+        </ul>
+      </section>
+      
+      <script>
+        function updateWorldClock() {
+          const newYorkTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York", hour12: false});
+          document.getElementById("new-york").textContent = newYorkTime;
+  
+          const sydneyTime = new Date().toLocaleString("en-AU", {timeZone: "Australia/Sydney", hour12: false});
+          document.getElementById("sydney").textContent = sydneyTime;
+  
+          const tokyoTime = new Date().toLocaleString("en-JP", {timeZone: "Asia/Tokyo", hour12: false});
+          document.getElementById("tokyo").textContent = tokyoTime;
+        }
+  
+        setInterval(updateWorldClock, 1000);
+      </script>
       <!-- Economic Calendar by TradingView -->
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async> { "colorTheme": "dark", "isTransparent": false, "width": "726", "height": "620", "locale": "en", "importanceFilter": "0,1", "currencyFilter": "AUD,USD,CAD,EUR,FRF,DEM,ITL,JPY,MXN,NZD,ZAR,ESP,CHF,TRL,GBP" } </script>
     </div>
