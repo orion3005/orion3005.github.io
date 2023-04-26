@@ -47,53 +47,20 @@
   <body>
     <!-- Navigation bar with home button -->
     <nav class="navbar">
-        <div class="home-button">
-          <a href="index.html">
-            <img src="https://raw.githubusercontent.com/orion3005/orion3005.github.io/main/favicon-36x36.png" alt="Home">
-          </a>
-        </div>
-        <div class="world-clock">
-          <div class="clock">
-            <h3>New York</h3>
-            <p id="new-york-time"></p>
-          </div>
-          <div class="clock">
-            <h3>Sydney</h3>
-            <p id="sydney-time"></p>
-          </div>
-          <div class="clock">
-            <h3>Tokyo</h3>
-            <p id="tokyo-time"></p>
-          </div>
-          <div class="clock">
-            <h3>London</h3>
-            <p id="london-time"></p>
-          </div>
-
-        </div>
-      </nav>
+      <div class="home-button">
+        <a href="index.html">
+          <img src="https://raw.githubusercontent.com/orion3005/orion3005.github.io/main/favicon-36x36.png" alt="Home">
+        </a>
+      </div>
+      <div>
+        <!-- Add more navigation links here -->
+      </div>
+    </nav>
     
     <div>
-      <h1>"Prudence dictates exiting winning positions long before the highs"</h1>
+      <h1>"Prudence dictates exiting winning positions long before the highs"</h1> a
       <!-- Economic Calendar by TradingView -->
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async> { "colorTheme": "dark", "isTransparent": false, "width": "726", "height": "620", "locale": "en", "importanceFilter": "0,1", "currencyFilter": "AUD,USD,CAD,EUR,FRF,DEM,ITL,JPY,MXN,NZD,ZAR,ESP,CHF,TRL,GBP" } </script>
     </div>
-    <script>
-        function updateTime() {
-          const newYork = moment.tz("America/New_York");
-          const sydney = moment.tz("Australia/Sydney");
-          const tokyo = moment.tz("Asia/Tokyo");
-          const london = moment.tz("Europe/London");
-          
-          document.getElementById("new-york-time").textContent = newYork.format("h:mm A");
-          document.getElementById("sydney-time").textContent = sydney.format("h:mm A");
-          document.getElementById("tokyo-time").textContent = tokyo.format("h:mm A");
-          document.getElementById("london-time").textContent = london.format("h:mm A");
-        }
-        
-        updateTime();
-        setInterval(updateTime, 1000);
-      </script>
-      
   </body>
 </html>
