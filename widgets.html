@@ -1,7 +1,39 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@orion3005 
+orion3005
+/
+orion3005.github.io
+Public
+Cannot fork because you own this repository and are not a member of any organizations.
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Settings
+Beta Try the new code view
+orion3005.github.io/widgets.html
+@orion3005
+orion3005 Update widgets.html
+Latest commit 33f496b 18 minutes ago
+ History
+ 1 contributor
+67 lines (61 sloc)  1.82 KB
+ 
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>World Time</title>
+    <title>Trading Floor</title>
     <style>
       /* Center the contents of the body element */
       body {
@@ -20,8 +52,8 @@
         margin-bottom: 24px;
       }
       
-      /* Header styles */
-      header {
+      /* Navigation bar styles */
+      .navbar {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -31,65 +63,37 @@
         color: #fff;
       }
       
-      /* Timezone styles */
-      .timezone {
-        margin: 0 16px;
-        text-align: center;
+      /* Home button styles */
+      .home-button {
+        display: flex;
+        align-items: center;
+        height: 32px;
       }
       
-      /* Timezone title styles */
-      .timezone h2 {
-        font-size: 18px;
-        margin-bottom: 8px;
-      }
-      
-      /* Timezone time styles */
-      .timezone p {
-        font-size: 36px;
-        margin: 0;
+      /* Home button image styles */
+      .home-button img {
+        height: 100%;
       }
     </style>
   </head>
   <body>
-    <header>
-      <div class="timezone">
-        <h2>New York</h2>
-        <p id="new-york"></p>
+    <!-- Navigation bar with home button -->
+    <nav class="navbar">
+      <div class="home-button">
+        <a href="index.html">
+          <img src="https://raw.githubusercontent.com/orion3005/orion3005.github.io/main/favicon-36x36.png" alt="Home">
+        </a>
       </div>
-      <div class="timezone">
-        <h2>London</h2>
-        <p id="london"></p>
+      <div>
+        <!-- Add more navigation links here -->
       </div>
-      <div class="timezone">
-        <h2>Sydney</h2>
-        <p id="sydney"></p>
-      </div>
-      <div class="timezone">
-        <h2>Tokyo</h2>
-        <p id="tokyo"></p>
-      </div>
-      <div class="timezone">
-        <h2>Beijing</h2>
-        <p id="beijing"></p>
-      </div>
-    </header>
+    </nav>
+    
+    <div>
+      <h1>"Prudence dictates exiting winning positions long before the highs"</h1>
 
-    <script>
-      function getTime(timezone, elementId) {
-        const date = new Date();
-        const utc = date.getTime() + (date.getTimezoneOffset() * 60000);
-        const offset = timezone * 3600000;
-        const time = new Date(utc + offset);
-        document.getElementById(elementId).textContent = time.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit', hour12: false});
-      }
-      
-      setInterval(() => {
-        getTime(-5, 'new-york'); // Eastern Standard Time
-        getTime(0, 'london'); // Greenwich Mean Time
-        getTime(10, 'sydney'); // Australian Eastern Standard Time
-        getTime(9, 'tokyo'); // Japan Standard Time
-        getTime(8, 'beijing'); // China Standard Time
-      }, 1000);
-    </script>
+      <!-- Economic Calendar by TradingView -->
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async> { "colorTheme": "dark", "isTransparent": false, "width": "726", "height": "620", "locale": "en", "importanceFilter": "0,1", "currencyFilter": "AUD,USD,CAD,EUR,FRF,DEM,ITL,JPY,MXN,NZD,ZAR,ESP,CHF,TRL,GBP" } </script>
+    </div>
   </body>
 </html>
