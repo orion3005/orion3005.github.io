@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Trading Floor</title>
+    <title>About Me</title>
     <style>
       /* Center the contents of the body element */
       body {
@@ -23,8 +23,8 @@
       /* Navigation bar styles */
       .navbar {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: center; /* Center the navbar items */
+        align-items: center; /* Center the navbar items */
         width: 100%;
         padding: 16px;
         background-color: #333;
@@ -40,12 +40,14 @@
         border-radius: 4px;
         background-color: #555;
         transition: background-color 0.3s ease;
-        margin: 0 auto; /* Center the home button */
+        margin-right: 8px; /* Add margin to separate from about button */
       }
       
       /* Home button image styles */
       .home-button img {
-        height: 100%;
+        max-height: 100%;
+        max-width: 100%; /* Added to ensure the image fits within the button */
+        object-fit: contain; /* Added to maintain aspect ratio */
         margin-right: 8px; /* Add margin to separate image and text */
       }
       
@@ -58,6 +60,44 @@
       /* Home button hover styles */
       .home-button:hover {
         background-color: #777;
+      }
+      
+      /* About Me button styles */
+      .about-button,
+      .links-button {
+        padding: 8px 16px;
+        border-radius: 4px;
+        background-color: #555;
+        transition: background-color 0.3s ease;
+        margin-left: 8px; /* Add margin to separate buttons */
+      }
+      
+      /* About Me and Links button text styles */
+      .about-button span,
+      .links-button span {
+        font-weight: bold;
+      }
+      
+      /* About Me and Links button hover styles */
+      .about-button:hover,
+      .links-button:hover {
+        background-color: #777;
+      }
+      
+      /* About Me section styles */
+      .about-me {
+        max-width: 600px;
+        margin-top: 40px;
+        padding: 16px;
+        border-radius: 4px;
+        background-color: #f7f7f7;
+        text-align: center;
+      }
+      
+      /* About Me section text styles */
+      .about-me p {
+        margin: 0; /* Remove default margin */
+        font-size: 18px;
       }
       
       /* Responsive styles */
@@ -90,21 +130,24 @@
         </a>
       </div>
       <div>
-        <a href="about_me.html">
+        <a href="about_me.html" class="about-button">
           <span>About Me</span>
         </a>
       </div>
       <div>
-        <a href="links.html">
+        <a href="links.html" class="links-button">
           <span>Links</span>
         </a>
       </div>
     </nav>
     
-    <div>
-      <h1>"Prudence dictates exiting winning positions long before the highs"</h1>
-      <!-- Economic Calendar by TradingView -->
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async> { "colorTheme": "dark", "isTransparent": false, "width": "100%", "height": "620", "locale": "en", "importanceFilter": "0,1", "currencyFilter": "AUD,USD,CAD,EUR,FRF,DEM,ITL,JPY,MXN,NZD,ZAR,ESP,CHF,TRL,GBP" } </script>
+    <!-- About Me section -->
+    <div id="about-me" class="about-me">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat lorem non nibh porttitor, ut gravida purus hendrerit. Sed maximus ultrices justo. Sed eleifend, est at lobortis sagittis, nunc lectus rutrum diam, eget iaculis odio nunc nec felis.</p>
+      </div>
     </div>
+    
   </body>
 </html>

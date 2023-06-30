@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>orionv.io</title>
+    <title>Links</title>
     <style>
       /* Center the contents of the body element */
       body {
@@ -84,20 +84,35 @@
         background-color: #777;
       }
       
-      /* About Me section styles */
-      .about-me {
+      /* Links section styles */
+      .links-section {
         max-width: 600px;
         margin-top: 40px;
         padding: 16px;
         border-radius: 4px;
         background-color: #f7f7f7;
         text-align: center;
+        display: flex; /* Add display flex to center the links-content */
+        flex-direction: column; /* Stack the links vertically */
+        align-items: center; /* Center the links horizontally */
       }
       
-      /* About Me section text styles */
-      .about-me p {
-        margin: 0; /* Remove default margin */
-        font-size: 18px;
+      /* Links section link styles */
+      .links-section a {
+        display: block;
+        margin-bottom: 16px;
+        padding: 8px 16px; /* Add padding to the links */
+        border-radius: 4px;
+        background-color: #555;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+      }
+      
+      /* Links section link hover styles */
+      .links-section a:hover {
+        background-color: #777;
       }
       
       /* Responsive styles */
@@ -141,11 +156,13 @@
       </div>
     </nav>
     
-    <!-- Homepage section -->
-    <div id="homepage" class="about-me">
-      <h2>Welcome to orionv.io</h2>
-      <div class="about-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat lorem non nibh porttitor, ut gravida purus hendrerit. Sed maximus ultrices justo. Sed eleifend, est at lobortis sagittis, nunc lectus rutrum diam, eget iaculis odio nunc nec felis.</p>
+    <!-- Links section -->
+    <div id="links-section" class="links-section">
+      <h2>Where else you can find me.</h2>
+      <div class="links-content">
+        <a href="https://github.com/orion3005/">Github orion3005</a>
+        <!--<a href="https://example2.com">Example 2</a>
+        <a href="https://example3.com">Example 3</a>-->
       </div>
     </div>
     
