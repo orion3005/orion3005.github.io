@@ -42,6 +42,26 @@
       .home-button img {
         height: 100%;
       }
+      
+      /* Responsive styles */
+      @media screen and (max-width: 480px) {
+        h1 {
+          font-size: 20px;
+          margin-bottom: 16px;
+        }
+        
+        .navbar {
+          padding: 8px;
+        }
+        
+        .home-button {
+          height: 24px;
+        }
+        
+        .home-button img {
+          max-height: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -60,7 +80,7 @@
     <div>
       <h1>"Prudence dictates exiting winning positions long before the highs"</h1>
       <!-- Economic Calendar by TradingView -->
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async> { "colorTheme": "dark", "isTransparent": false, "width": "726", "height": "620", "locale": "en", "importanceFilter": "0,1", "currencyFilter": "AUD,USD,CAD,EUR,FRF,DEM,ITL,JPY,MXN,NZD,ZAR,ESP,CHF,TRL,GBP" } </script>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async> { "colorTheme": "dark", "isTransparent": false, "width": "100%", "height": "620", "locale": "en", "importanceFilter": "0,1", "currencyFilter": "AUD,USD,CAD,EUR,FRF,DEM,ITL,JPY,MXN,NZD,ZAR,ESP,CHF,TRL,GBP" } </script>
     </div>
   </body>
 </html>
