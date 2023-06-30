@@ -23,7 +23,7 @@
       /* Navigation bar styles */
       .navbar {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         width: 100%;
         padding: 16px;
@@ -36,6 +36,10 @@
         display: flex;
         align-items: center;
         height: 32px;
+        padding: 8px;
+        border-radius: 4px;
+        background-color: #555;
+        transition: background-color 0.3s ease;
       }
       
       /* Home button image styles */
@@ -46,6 +50,12 @@
       /* Home button text styles */
       .home-button span {
         margin-left: 8px;
+        font-weight: bold;
+      }
+      
+      /* Home button hover styles */
+      .home-button:hover {
+        background-color: #777;
       }
       
       /* Responsive styles */
@@ -72,14 +82,14 @@
   <body>
     <!-- Navigation bar with home button -->
     <nav class="navbar">
+      <div>
+        <!-- Add more navigation links here -->
+      </div>
       <div class="home-button">
         <a href="index.html">
           <img src="https://raw.githubusercontent.com/orion3005/orion3005.github.io/main/favicon-36x36.png" alt="Home">
           <span>orionv.io</span>
         </a>
-      </div>
-      <div>
-        <!-- Add more navigation links here -->
       </div>
     </nav>
     
