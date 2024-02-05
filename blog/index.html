@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+    <title>Orion's Mind</title>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Welcome to the mind of Orion</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" role="button">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h2>Welcome to My Blog</h2>
+                    <h3>Your daily dose of insights</h3>
+                </hgroup>
+                <p>This is where I share my thoughts, stories, and ideas. Stay tuned for the latest posts.</p>
+                <figure>
+                    <img src="https://source.unsplash.com/random/800x600" alt="Featured Image" />
+                    <figcaption><a href="#" target="_blank">Read More</a></figcaption>
+                </figure>
+                <h3>Recent Posts</h3>
+                <p>Discover my latest blog posts on various topics. There's always something new to learn!</p>
+                <h3>About Me</h3>
+                <p>Learn more about my journey, what I do, and why I started this blog.</p>
+            </section>
+        </div>
+    </main>
+    <section aria-label="Subscribe example">
+        <div class="container">
+            <article>
+                <hgroup>
+                    <h2>Stay Updated</h2>
+                    <h3>Subscribe to my newsletter</h3>
+                </hgroup>
+                <form class="grid">
+                    <input type="text" id="firstname" name="firstname" placeholder="Your Name" aria-label="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+                    <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+                </form>
+            </article>
+        </div>
+    </section>
+    <footer class="container">
+        <small>
+            <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
+        </small>
+    </footer>
+</body>
+</html>
