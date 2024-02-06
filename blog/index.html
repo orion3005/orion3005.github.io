@@ -14,48 +14,32 @@
         <ul>
             <li><a href="/blog/">Home</a></li>
             <li><a href="/blog/about.html">About</a></li>
-            <li><a href="/blog/contact.html" role="button">Contact</a></li>
+            <li><a href="/blog/contact.html">Contact</a></li>
         </ul>
     </nav>
     <main class="container">
-        <div class="grid">
-            <section>
-                <hgroup>
-                    <h2>Welcome to My Blog</h2>
-                    <h3>Your daily dose of insights</h3>
-                </hgroup>
-                <p>This is where I share my thoughts, stories, and ideas. Stay tuned for the latest posts.</p>
-                <figure>
-                    <img src="https://source.unsplash.com/random/800x600" alt="Featured Image" />
-                    <figcaption><a href="#" target="_blank">Read More</a></figcaption>
-                </figure>
-                <h3>Recent Posts</h3>
-                <p>Discover my latest blog posts on various topics. There's always something new to learn!</p>
-            </section>
-        </div>
+        <section>
+            <h2>Welcome to My Blog</h2>
+            <p>This is where I share my thoughts, stories, and ideas. Stay tuned for the latest posts.</p>
+            <figure>
+                <img src="https://source.unsplash.com/random/800x600" alt="Featured Image" />
+                <!-- Optionally, you can remove or adjust this caption 
+                <figcaption>Inspirational Caption Here</figcaption> -->
+            </figure>
+            <!-- Direct link to the blog posts page -->
+            <p><a href="/blog/posts.html">Explore All Posts</a></p>
+        </section>
     </main>
     <section aria-label="Subscribe example">
         <div class="container">
             <article>
-                <hgroup>
-                    <h2>Stay Updated</h2>
-                    <h3>Subscribe to my blog</h3>
-                </hgroup>
-                <form
-                action="https://buttondown.email/api/emails/embed-subscribe/orion3005"
-                method="post"
-                target="popupwindow"
-                onsubmit="window.open('https://buttondown.email/orion3005', 'popupwindow')"
-                class="embeddable-buttondown-form"
-              >
-                <label for="bd-email">Enter your email</label>
-                <input type="email" name="email" id="bd-email" />
-                
-                <input type="submit" value="Subscribe" />
-                <p>
-                  <a href="https://buttondown.email/refer/orion3005" target="_blank"></a>
-                </p>
-              </form>
+                <h2>Stay Updated</h2>
+                <p>Subscribe to my blog</p>
+                <form action="https://buttondown.email/api/emails/embed-subscribe/orion3005" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/orion3005', 'popupwindow')" class="embeddable-buttondown-form">
+                    <label for="bd-email">Enter your email</label>
+                    <input type="email" name="email" id="bd-email" />
+                    <input type="submit" value="Subscribe" />
+                </form>
             </article>
         </div>
     </section>
