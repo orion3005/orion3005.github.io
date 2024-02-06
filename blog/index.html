@@ -43,11 +43,21 @@
                     <h2>Stay Updated</h2>
                     <h3>Subscribe to my newsletter</h3>
                 </hgroup>
-                <form class="grid">
-                    <input type="text" id="firstname" name="firstname" placeholder="Your Name" aria-label="Your Name" required>
-                    <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
-                    <button type="submit" onclick="event.preventDefault()">Subscribe</button>
-                </form>
+                <form
+                action="https://buttondown.email/api/emails/embed-subscribe/orion3005"
+                method="post"
+                target="popupwindow"
+                onsubmit="window.open('https://buttondown.email/orion3005', 'popupwindow')"
+                class="embeddable-buttondown-form"
+              >
+                <label for="bd-email">Enter your email</label>
+                <input type="email" name="email" id="bd-email" />
+                
+                <input type="submit" value="Subscribe" />
+                <p>
+                  <a href="https://buttondown.email/refer/orion3005" target="_blank">Powered by Buttondown.</a>
+                </p>
+              </form>
             </article>
         </div>
     </section>
