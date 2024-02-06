@@ -21,18 +21,21 @@
         <section>
             <h1>Contact</h1>
             <p>If you have any questions, suggestions, or just want to say hello, feel free to reach out to me. I love hearing from readers and will do my best to respond promptly.</p>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
+            <form
+            action="https://formspree.io/f/xeqyalbj"
+            method="POST"
+          >
+            <label>
+              Your email:
+              <input type="email" name="email">
+            </label>
+            <label>
+              Your message:
+              <textarea name="message"></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+          </form>
         </section>
     </main>
     <footer class="container">
