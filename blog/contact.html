@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
-        <title>Contact Me | Orion's Mind</title>
-        <style>
-            body {
-                background-color: #24273a; /* Dark background color */
-                color: #cad3f5; /* Light text color */
-            }
-            a, a:visited {
-                color: #cad3f5; /* Ensures links are also styled with the light text color */
-            }
-            /* Optionally style other elements like form inputs, buttons, etc., to match your color scheme */
-            input[type="email"], input[type="submit"] {
-                background-color: #3e3a56; /* Slightly lighter background for inputs */
-                border-color: #cad3f5; /* Light text color for border */
-                color: #cad3f5; /* Light text color */
-            }
-            input[type="submit"] {
-                cursor: pointer; /* Changes cursor to pointer when hovering over submit button */
-            }
-        </style>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+    <title>Contact Me | Orion's Mind</title>
+    <style>
+        body {
+            background-color: #24273a; /* Dark background color */
+            color: #cad3f5; /* Light text color */
+        }
+        a, a:visited {
+            color: #cad3f5; /* Ensures links are also styled with the light text color */
+        }
+        input[type="email"], input[type="submit"], textarea {
+            background-color: #3e3a56; /* Slightly lighter background for inputs */
+            border: 1px solid #cad3f5; /* Light text color for border */
+            color: #cad3f5; /* Light text color */
+            padding: 8px; /* Uniform padding for inputs and textarea */
+            border-radius: 4px; /* Rounded corners for a polished look */
+            width: 100%; /* Full width to match other form elements */
+        }
+        input[type="submit"] {
+            cursor: pointer; /* Changes cursor to pointer when hovering over submit button */
+            background-color: #565190; /* Different background color for button to stand out */
+        }
+        textarea {
+            resize: vertical; /* Allows vertical resize only */
+            height: 150px; /* Initial height set for textarea */
+        }
+        label {
+            display: block; /* Makes each label block-level for better spacing */
+            margin-bottom: 1rem; /* Adds space below each label */
+        }
+    </style>
+</head>
 <body>
     <nav class="container-fluid">
         <ul>
@@ -39,21 +50,17 @@
         <section>
             <h1>Contact</h1>
             <p>If you have any questions, suggestions, or just want to say hello, feel free to reach out to me. I love hearing from readers and will do my best to respond promptly.</p>
-            <form
-            action="https://formspree.io/f/xeqyalbj"
-            method="POST"
-          >
-            <label>
-              Your email:
-              <input type="email" name="email">
-            </label>
-            <label>
-              Your message:
-              <textarea name="message"></textarea>
-            </label>
-            <!-- your other form fields go here -->
-            <button type="submit">Send</button>
-          </form>
+            <form action="https://formspree.io/f/xeqyalbj" method="POST">
+                <label>
+                  Your email:
+                  <input type="email" name="email">
+                </label>
+                <label>
+                  Your message:
+                  <textarea name="message"></textarea>
+                </label>
+                <button type="submit">Send</button>
+            </form>
         </section>
     </main>
     <footer class="container">

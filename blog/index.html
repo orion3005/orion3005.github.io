@@ -13,7 +13,7 @@
             a, a:visited {
                 color: #cad3f5; /* Ensures links are also styled with the light text color */
             }
-            /* Optionally style other elements like form inputs, buttons, etc., to match your color scheme */
+            /* Styling for form inputs and buttons */
             input[type="email"], input[type="submit"] {
                 background-color: #3e3a56; /* Slightly lighter background for inputs */
                 border-color: #cad3f5; /* Light text color for border */
@@ -22,7 +22,23 @@
             input[type="submit"] {
                 cursor: pointer; /* Changes cursor to pointer when hovering over submit button */
             }
+            /* Custom styling for the 'Explore All Posts' link */
+            .explore-posts-link {
+                font-size: 1.25rem; /* Increases the font size */
+                font-weight: bold; /* Makes the text bold */
+                padding: 10px; /* Adds some padding around the link */
+                display: inline-block; /* Allows padding to take effect */
+                margin-top: 20px; /* Adds some space above the link */
+                background-color: #3e3a56; /* Optional: Adds a background color */
+                border-radius: 5px; /* Optional: Rounds the corners of the background */
+                text-decoration: none; /* Removes the underline from the link */
+            }
+            .explore-posts-link:hover, .explore-posts-link:focus {
+                background-color: #565190; /* Changes background color on hover/focus for better interaction feedback */
+                color: #cad3f5; /* Ensures the text color remains consistent on hover/focus */
+            }
         </style>
+        
     </head>
 <body>
     <nav class="container-fluid">
@@ -45,7 +61,8 @@
                 <figcaption>Inspirational Caption Here</figcaption> -->
             </figure>
             <!-- Direct link to the blog posts page -->
-            <p><a href="/blog/posts.html">Explore All Posts</a></p>
+            <p><a href="/blog/posts.html" class="explore-posts-link">Explore All Posts</a></p>
+
         </section>
     </main>
     <section aria-label="Subscribe example">
