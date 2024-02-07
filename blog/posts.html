@@ -13,7 +13,7 @@
             a, a:visited {
                 color: #cad3f5; /* Ensures links are also styled with the light text color */
             }
-            /* Optionally style other elements like form inputs, buttons, etc., to match your color scheme */
+            /* Styling for form inputs and buttons */
             input[type="email"], input[type="submit"] {
                 background-color: #3e3a56; /* Slightly lighter background for inputs */
                 border-color: #cad3f5; /* Light text color for border */
@@ -22,7 +22,22 @@
             input[type="submit"] {
                 cursor: pointer; /* Changes cursor to pointer when hovering over submit button */
             }
+            /* Custom styling for 'Read More' links to look like buttons */
+            .read-more {
+                background-color: #565190; /* Button background color */
+                color: #cad3f5; /* Button text color */
+                padding: 10px 15px; /* Padding inside the button */
+                text-decoration: none; /* Remove underline from links */
+                border-radius: 5px; /* Rounded corners for the button */
+                display: inline-block; /* Needed to apply padding and border-radius */
+                margin-top: 5px; /* Space above the button */
+            }
+            .read-more:hover, .read-more:focus {
+                background-color: #6f729c; /* Slightly lighter color on hover/focus */
+                color: #ffffff; /* Optional: change text color on hover/focus */
+            }
         </style>
+        
     </head>
 <body>
     <nav class="container-fluid">
@@ -41,14 +56,15 @@
             <li>
                 <article>
                     <h2><a href="/blog/posts/2024-02-06.html">Why I created this blog</a></h2>
-                    <p>You may be wondering, "Orion, why did you create a blog? Social media exists, who makes a blog in 2024?"  <a href="/blog/posts/2024-02-06.html">Read More</a></p>
+                    <p>You may be wondering, "Orion, why did you create a blog? Social media exists, who makes a blog in 2024?"  <a href="/blog/posts/2024-02-06.html" class="read-more">Read More</a></p>
+
                     <time datetime="YYYY-MM-DD">2024-02-06</time>
                 </article>
             </li>
             <li>
                 <article>
                     <h2><a href="/blog/posts/2024-02-05.html">First Post</a></h2>
-                    <p>Created blog website <a href="/blog/posts/2024-02-05.html">Read More</a></p>
+                    <p>Created blog website <a href="/blog/posts/2024-02-05.html" class="read-more">Read More</a></p>
                     <time datetime="YYYY-MM-DD">2024-02-05</time>
                 </article>
             </li>
