@@ -26,6 +26,46 @@
                 background-color: #1e2030; /* Updated color */
                 /* Add any additional styling you need here */
             }
+            /* Target the main article for overall background */
+            main article {
+                background-color: #1e2030; /* New background color for the article */
+                /* Add any additional styling you need here */
+                padding: 20px; /* Add padding to create some space inside the box */
+                border-radius: 5px; /* If you want rounded corners */
+                margin-bottom: 20px; /* Add bottom margin for spacing between articles */
+            }
+            /* If you want to target individual sections within the article */
+            main article section {
+                background-color: #1e2030; /* New background color for sections within the article */
+                /* Add any additional styling you need here */
+                padding: 15px; /* Add padding to create some space inside the box */
+                border-radius: 5px; /* If you want rounded corners */
+                margin-bottom: 15px; /* Add bottom margin for spacing between sections */
+            }
+            /* Target the header within the article specifically */
+            main article header {
+                background-color: #1e2030; /* New background color for the header */
+                padding: 20px; /* Add padding to create some space inside the header */
+                border-radius: 5px; /* If you want rounded corners */
+            }
+            /* Target the footer within the article */
+            main article footer {
+                background-color: #1e2030; /* Sets the background color */
+                padding: 20px; /* Adjust padding to match header and content area */
+                /* Other styles if necessary */
+            }
+
+            /* Ensure consistent padding and margins */
+            main article, main article header, main article section, main article footer {
+                padding: 20px; /* Or whatever value is needed for alignment */
+                margin: 0 auto; /* Centers the content, if applicable */
+            }
+
+            /* If the footer seems to be wider than the body text, it might be due to the padding or margin settings. Ensure they are the same. */
+            main article {
+                padding: 20px; /* Adjust this to match your actual layout */
+                box-sizing: border-box; /* This ensures padding is included in the width */
+            }
         </style>
     </head>
 <body>
