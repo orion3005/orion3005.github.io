@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
-        <title>Orion's Mind</title>
+        <title>All Posts | Orion's Mind</title>
         <style>
             body {
                 background-color: #24273a; /* Dark background color */
@@ -22,25 +22,28 @@
             input[type="submit"] {
                 cursor: pointer; /* Changes cursor to pointer when hovering over submit button */
             }
-            /* Custom styling for the 'Explore All Posts' link */
-            .explore-posts-link {
-                font-size: 1.25rem; /* Increases the font size */
-                font-weight: bold; /* Makes the text bold */
-                padding: 10px; /* Adds some padding around the link */
-                display: inline-block; /* Allows padding to take effect */
-                margin-top: 20px; /* Adds some space above the link */
-                background-color: #3e3a56; /* Optional: Adds a background color */
-                border-radius: 5px; /* Optional: Rounds the corners of the background */
-                text-decoration: none; /* Removes the underline from the link */
+            /* Custom styling for 'Read More' links to look like buttons */
+            .read-more {
+                background-color: #565190; /* Button background color */
+                color: #cad3f5; /* Button text color */
+                padding: 10px 15px; /* Padding inside the button */
+                text-decoration: none; /* Remove underline from links */
+                border-radius: 5px; /* Rounded corners for the button */
+                display: inline-block; /* Needed to apply padding and border-radius */
+                margin-top: 5px; /* Space above the button */
             }
-            .explore-posts-link:hover, .explore-posts-link:focus {
-                background-color: #565190; /* Changes background color on hover/focus for better interaction feedback */
-                color: #cad3f5; /* Ensures the text color remains consistent on hover/focus */
+            .read-more:hover, .read-more:focus {
+                background-color: #6f729c; /* Slightly lighter color on hover/focus */
+                color: #ffffff; /* Optional: change text color on hover/focus */
             }
-            section[aria-label="Subscribe example"] article {
-                background-color: #1e2030; /* Updated color */
-                /* Add any additional styling you need here */
+            /* Target the article within the post list */
+            .post-list li article {
+                background-color: #1e2030; /* New background color */
+                padding: 1rem; /* You can adjust the padding as needed */
+                border-radius: 5px; /* This will maintain the rounded corners */
+                margin-bottom: 1rem; /* This adds some space between the posts */
             }
+
         </style>
         
     </head>
@@ -56,32 +59,34 @@
         </ul>
     </nav>
     <main class="container">
-        <section>
-            <h2>Welcome to My Blog</h2>
-            <p>This is where I share my thoughts, stories, and ideas. Stay tuned for the latest posts.</p>
-            <figure>
-                <img src="https://raw.githubusercontent.com/orion3005/images/main/d409f849-ec3a-4a40-a7cd-934620e316e2.webp" alt="Featured Image" />
-                <!-- Optionally, you can remove or adjust this caption 
-                <figcaption>Inspirational Caption Here</figcaption> -->
-            </figure>
-            <!-- Direct link to the blog posts page -->
-            <p><a href="/blog/posts/" class="explore-posts-link">Explore All Posts</a></p>
+        <h1>All Blog Posts</h1>
+        <ul class="post-list">
+            <li>
+                <article>
+                    <h2><a href="/blog/posts/2024-02-10/">Digital Minimalism</a></h2>
+                    <p>Digital minimalism is a philosophy I embrace that focuses on using technology only when it adds value to my life, thereby minimizing distractions.<a href="/blog/posts/2024-02-10/" class="read-more">Read More</a></p>
+                    <time datetime="YYYY-MM-DD">2024-02-10</time>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h2><a href="/blog/posts/2024-02-06/">Why I created this blog</a></h2>
+                    <p>You may be wondering, "Orion, why did you create a blog? Social media exists, who makes a blog in 2024?"  <a href="/blog/posts/2024-02-06/" class="read-more">Read More</a></p>
 
-        </section>
+                    <time datetime="YYYY-MM-DD">2024-02-06</time>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h2><a href="/blog/posts/2024-02-05/">First Post</a></h2>
+                    <p>Created blog website <a href="/blog/posts/2024-02-05/" class="read-more">Read More</a></p>
+                    <time datetime="YYYY-MM-DD">2024-02-05</time>
+                </article>
+            </li>
+            <!-- Repeat for each post -->
+        </ul>
+        <!-- Pagination can go here if needed -->
     </main>
-    <section aria-label="Subscribe example">
-        <div class="container">
-            <article>
-                <h2>Stay Updated</h2>
-                <p>Subscribe to my blog</p>
-                <form action="https://buttondown.email/api/emails/embed-subscribe/orion3005" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/orion3005', 'popupwindow')" class="embeddable-buttondown-form">
-                    <label for="bd-email">Enter your email</label>
-                    <input type="email" name="email" id="bd-email" />
-                    <input type="submit" value="Subscribe" />
-                </form>
-            </article>
-        </div>
-    </section>
     <footer class="container">
         <small>
             <a href="/blog/privacy-policy/">Privacy Policy</a> • <a href="/blog/terms-of-service/">Terms of Service</a>
