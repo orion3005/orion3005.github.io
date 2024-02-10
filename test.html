@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+    <title>Why I Created This Blog | Orion's Mind</title>
+    <style>
+        /* General Styles */
+        body {
+            background-color: #24273a;
+            color: #cad3f5 !important;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        a, a:visited {
+            color: inherit;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Form Styles */
+        input[type="email"], input[type="submit"] {
+            background-color: #3e3a56;
+            border: 1px solid #cad3f5;
+            color: inherit;
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            cursor: pointer;
+        }
+        /* Custom Link Styles */
+        .custom-link {
+            font-size: 1.25rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #3e3a56;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .custom-link:hover, .custom-link:focus {
+            background-color: #565190;
+        }
+        /* Subscribe Section Styles */
+        section[aria-label="Subscribe to the blog"] {
+            background-color: #1e2030;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<nav class="container">
+    <ul>
+        <li><strong>The mind of Orion</strong></li>
+    </ul>
+    <ul>
+        <li><a href="/blog/">Home</a></li>
+        <li><a href="/blog/about/">About</a></li>
+        <li><a href="/blog/contact/">Contact</a></li>
+    </ul>
+</nav>
+<main class="container">
+    <article>
+        <header>
+            <h1>Why I created this blog</h1>
+            <p class="post-meta">Posted on <time datetime="YYYY-MM-DD">2024-02-06</time> by Orion</p>
+        </header>
+        <figure>
+            <img src="https://raw.githubusercontent.com/orion3005/images/main/d409f849-ec3a-4a40-a7cd-934620e316e2.webp" alt="Specific Image Description">
+            <figcaption>Rediscovering the Art of Solitude: A Journey Back to the Heart of Creativity and Personal Reflection in the Digital Age</figcaption>
+        </figure>
+        <section class="post-content">
+            <!-- Content goes here -->
+        </section>
+        <footer>
+        </footer>
+    </article>
+</main>
+<section aria-label="Subscribe to the blog">
+    <div class="container">
+        <form action="https://buttondown.email/api/emails/embed-subscribe/orion3005" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/orion3005', 'popupwindow')" class="embeddable-buttondown-form">
+            <label for="bd-email">Enter your email to subscribe:</label>
+            <input type="email" name="email" id="bd-email" required>
+            <input type="submit" value="Subscribe">
+        </form>
+    </div>
+</section>
+<footer class="container">
+    <small>
+        <a href="/blog/privacy-policy/">Privacy Policy</a> • <a href="/blog/terms-of-service/">Terms of Service</a>
+    </small>
+</footer>
+</body>
+</html>
