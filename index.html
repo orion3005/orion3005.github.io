@@ -1,156 +1,74 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>orionv.io</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Custom Homepage</title>
     <style>
-      /* Center the contents of the body element */
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        font-family: monospace; /* Set font family to monospace */
-        background-color: #24273a; /* Set background color */
-        color: #cad3f5; /* Set text color */
-      }
-      
-      /* Optional styling for the h1 element */
-      h1 {
-        font-size: 24px;
-        text-align: center;
-        margin-bottom: 24px;
-      }
-      
-      /* Navigation bar styles */
-      .navbar {
-        display: flex;
-        justify-content: center; /* Center the navbar items */
-        align-items: center; /* Center the navbar items */
-        width: 100%;
-        padding: 16px;
-        background-color: #1b1e2c;
-        color: #fff;
-      }
-      
-      /* Home button styles */
-      .home-button {
-        display: flex;
-        align-items: center;
-        height: 32px;
-        padding: 8px;
-        border-radius: 4px;
-        background-color: #2f334d; /* Set background color */
-        transition: background-color 0.3s ease;
-        margin-right: 8px; /* Add margin to separate from about button */
-      }
-      
-      /* Home button image styles */
-      .home-button img {
-        max-height: 100%;
-        max-width: 100%; /* Added to ensure the image fits within the button */
-        object-fit: contain; /* Added to maintain aspect ratio */
-        margin-right: 8px; /* Add margin to separate image and text */
-      }
-      
-      /* Home button text styles */
-      .home-button span {
-        font-weight: bold;
-        text-align: center; /* Center the text */
-      }
-      
-      /* Home button hover styles */
-      .home-button:hover {
-        background-color: #494f75;
-      }
-      
-      /* About Me button styles */
-      .about-button,
-      .links-button {
-        padding: 8px 16px;
-        border-radius: 4px;
-        background-color: #2f334d; /* Set background color */
-        transition: background-color 0.3s ease;
-        margin-left: 8px; /* Add margin to separate buttons */
-      }
-      
-      /* About Me and Links button text styles */
-      .about-button span,
-      .links-button span {
-        font-weight: bold;
-      }
-      
-      /* About Me and Links button hover styles */
-      .about-button:hover,
-      .links-button:hover {
-        background-color: #494f75;
-      }
-      
-      /* About Me section styles */
-      .about-me {
-        max-width: 600px;
-        margin-top: 40px;
-        padding: 16px;
-        border-radius: 4px;
-        background-color: #2f334d; /* Set background color */
-        text-align: center;
-      }
-      
-      /* About Me section text styles */
-      .about-me p {
-        margin: 0; /* Remove default margin */
-        font-size: 18px;
-      }
-      
-      /* Responsive styles */
-      @media screen and (max-width: 480px) {
-        h1 {
-          font-size: 20px;
-          margin-bottom: 16px;
+        body, html {
+            height: 100%;
+            margin: 0;
         }
-        
-        .navbar {
-          padding: 8px;
+
+        .bg {
+            /* Placeholder for background GIF */
+            background-image: url('https://source.unsplash.com/random/1920x1080?gif');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            flex-direction: column;
         }
-        
-        .home-button {
-          height: 24px;
+
+        .center-img {
+            align-self: center;
+            margin: auto;
         }
-        
-        .home-button img {
-          max-height: 100%;
+
+        nav {
+            background: rgba(0, 0, 0, 0.5); /* Adding background to make nav visible */
+            width: 100%;
+            padding: 10px 0; /* Add some padding */
         }
-      }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0; /* Remove default margin */
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
     </style>
-  </head>
-  <body>
-    <!-- Navigation bar with home button -->
-    <nav class="navbar">
-      <div class="home-button">
-        <a href="index.html">
-          <img src="https://raw.githubusercontent.com/orion3005/orion3005.github.io/main/favicon-36x36.png" alt="Home">
-        </a>
-      </div>
-      <div>
-        <a href="about_me.html" class="about-button">
-          <span>About Me</span>
-        </a>
-      </div>
-      <div>
-        <a href="links.html" class="links-button">
-          <span>Links</span>
-        </a>
-      </div>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
     </nav>
-    
-    <!-- Homepage section -->
-    <div id="homepage" class="about-me">
-      <h2>Welcome to orionv.io</h2>
-      <div class="about-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat lorem non nibh porttitor, ut gravida purus hendrerit. Sed maximus ultrices justo. Sed eleifend, est at lobortis sagittis, nunc lectus rutrum diam, eget iaculis odio nunc nec felis.</p>
-      </div>
+    <div class="bg">
+        <img src="https://source.unsplash.com/random/600x400?" alt="Central Image" class="center-img">
     </div>
-    
-  </body>
+</body>
 </html>
