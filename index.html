@@ -14,7 +14,7 @@
 
         .bg {
             /* Placeholder for background GIF */
-            background-image: url('https://source.unsplash.com/random/1920x1080?gif');
+            background-image: url('https://raw.githubusercontent.com/orion3005/images/main/anime-city.gif');
             height: 100%;
             background-position: center;
             background-repeat: no-repeat;
@@ -30,9 +30,15 @@
         }
 
         nav {
-            background: rgba(0, 0, 0, 0.5); /* Adding background to make nav visible */
+            background: rgba(0, 0, 0, 0.0); /* Updated for 80% transparency */
             width: 100%;
-            padding: 10px 0; /* Add some padding */
+            padding: 10px 0; /* Existing padding */
+            position: absolute; /* Make nav bar position absolute */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            display: flex;
+            justify-content: center; /* Ensure content is centered */
+            z-index: 1; /* Ensure nav is above background */
         }
 
         nav ul {
@@ -68,7 +74,8 @@
         </ul>
     </nav>
     <div class="bg">
-        <img src="https://source.unsplash.com/random/600x400?" alt="Central Image" class="center-img">
+    
     </div>
+    
 </body>
 </html>
