@@ -29,7 +29,7 @@ label[for="bd-email"] {
     color: #cad3f5;
 }
 
-input[type="email"], input[type="submit"] {
+input[type="email"], input[type="submit"], button[type="submit"] {
     background-color: #565190; /* Slightly lighter background for inputs */
     border: 1px solid #cad3f5; /* Light text color for border */
     color: #cad3f5; /* Light text color */
@@ -37,12 +37,8 @@ input[type="email"], input[type="submit"] {
     border-radius: 5px; /* Optional: Adds rounded corners */
     margin-bottom: 10px; /* Add some bottom margin */
     box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-}
+    }
 input[type="submit"] {
-    cursor: pointer; /* Changes cursor to pointer when hovering over submit button */
-    background-color: #565190; /* Different background color for button to stand out */
-}
-button[type="submit"] {
     cursor: pointer; /* Changes cursor to pointer when hovering over submit button */
     background-color: #565190; /* Different background color for button to stand out */
 }
@@ -55,6 +51,7 @@ textarea {
 label {
     display: block; /* Makes each label block-level for better spacing */
     margin-bottom: 1rem; /* Adds space below each label */
+    color: #cad3f5;
 }
 /* Custom styling for the 'Explore All Posts' link */
 .explore-posts-link {
