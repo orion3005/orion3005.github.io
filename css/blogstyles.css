@@ -45,7 +45,7 @@ input[type="submit"] {
 textarea {
     resize: vertical; /* Allows vertical resize only */
     height: 150px; /* Initial height set for textarea */
-    background-color: #3e3a56;
+    background-color: #cad3f5;
 
 }
 label {
