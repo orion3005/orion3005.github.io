@@ -1,0 +1,89 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-image: url('https://raw.githubusercontent.com/orion3005/images/main/anime-city.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px; /* Add padding to push content below nav */
+    min-height: 100%; /* Ensure it covers at least the whole viewport */
+    align-items: center;
+}
+
+.center-img {
+    align-self: center;
+    margin: auto;
+}
+
+nav {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    padding: 10px 0;
+    padding-bottom: 0px;
+    position: static;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+.text-box {
+    background: linear-gradient(to right,
+                        rgba(0, 0, 0, 0) 0%,
+                        rgba(0, 0, 0, 0.8) 20%,
+                        rgba(0, 0, 0, 0.8) 20%,
+                        rgba(0, 0, 0, 0.8) 80%,
+                        rgba(0, 0, 0, 0.8) 80%,
+                        rgba(0, 0, 0, 0) 100%);
+    color: white; /* Text color */
+    padding: 20px; /* Spacing inside the box */
+    margin: 0px auto; /* Spacing outside the box, centered horizontally */
+    width: calc(100% - 40px); /* Full width minus the margin */
+    max-width: 800px; /* You can set a max-width if you want */
+    box-sizing: border-box; /* To include padding in width calculation */
+    z-index: 1; /* Ensure it's above the background */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    text-align: center; /* Center text horizontally */
+    flex-direction: column; /* Stack children vertically */
+    height: auto; /* Set a height for the box */
+    position: relative; /* Correct positioning type */
+}
+.text-content {
+    max-width: 80%; /* Matches the solid gradient portion */
+    margin: 0 auto; /* Center the text container */
+}
+.text-box h1, .text-box p {
+    color: white; /* This will ensure all <h1> and <p> inside .text-box are white */
+}
