@@ -134,9 +134,16 @@ main article footer {
     padding: 20px; /* Or whatever value is needed for alignment */
     margin: 0 auto; /* Centers the content, if applicable */
 }
-
+main section {
+    background-color: #1e2030;
+    padding: 20px;
+}
 /* If the footer seems to be wider than the body text, it might be due to the padding or margin settings. Ensure they are the same. */
 main article {
     padding: 20px; /* Adjust this to match your actual layout */
     box-sizing: border-box; /* This ensures padding is included in the width */
+}
+section div article {
+    background-color: #1e2030;
+    padding: 20px;
 }
