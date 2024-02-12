@@ -1,0 +1,141 @@
+body {
+    background-color: #24273a; /* Dark background color */
+    color: #cad3f5 !important; /* Light text color */
+    font-family: Arial, sans-serif; /* Optional: Set a default font-family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+a, a:visited {
+    color: #cad3f5 !important; /* Ensures links are also styled with the light text color */
+    text-decoration: none; /* Remove underline from links */
+}
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div,
+ul,
+ol,
+li {
+    color: #cad3f5 !important;
+}
+/* Styling for form inputs and buttons */
+label[for="bd-email"] {
+    color: #cad3f5;
+}
+
+input[type="email"], input[type="submit"] {
+    background-color: #565190; /* Slightly lighter background for inputs */
+    border: 1px solid #cad3f5; /* Light text color for border */
+    color: #cad3f5; /* Light text color */
+    padding: 8px; /* Adjust padding for inputs */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    margin-bottom: 10px; /* Add some bottom margin */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+input[type="submit"] {
+    cursor: pointer; /* Changes cursor to pointer when hovering over submit button */
+    background-color: #565190; /* Different background color for button to stand out */
+}
+textarea {
+    resize: vertical; /* Allows vertical resize only */
+    height: 150px; /* Initial height set for textarea */
+    background-color: #3e3a56;
+
+}
+label {
+    display: block; /* Makes each label block-level for better spacing */
+    margin-bottom: 1rem; /* Adds space below each label */
+}
+/* Custom styling for the 'Explore All Posts' link */
+.explore-posts-link {
+    font-size: 1.25rem; /* Increases the font size */
+    font-weight: bold; /* Makes the text bold */
+    padding: 10px 20px; /* Adds some padding around the link */
+    display: inline-block; /* Allows padding to take effect */
+    margin-top: 20px; /* Adds some space above the link */
+    background-color: #3e3a56; /* Optional: Adds a background color */
+    border-radius: 5px; /* Optional: Rounds the corners of the background */
+    text-decoration: none; /* Removes the underline from the link */
+    transition: background-color 0.3s ease; /* Add smooth transition effect */
+}
+.explore-posts-link:hover, .explore-posts-link:focus {
+    background-color: #565190; /* Changes background color on hover/focus for better interaction feedback */
+    color: #cad3f5; /* Ensures the text color remains consistent on hover/focus */
+}
+section[aria-label="Subscribe example"] article {
+    background-color: #1e2030; /* Updated color */
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    margin-bottom: 20px; /* Add bottom margin */
+}
+/* Custom styling for 'Read More' links to look like buttons */
+.read-more {
+    background-color: #565190; /* Button background color */
+    color: #cad3f5; /* Button text color */
+    padding: 10px 15px; /* Padding inside the button */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px; /* Rounded corners for the button */
+    display: inline-block; /* Needed to apply padding and border-radius */
+    margin-top: 5px; /* Space above the button */
+}
+.read-more:hover, .read-more:focus {
+    background-color: #6f729c; /* Slightly lighter color on hover/focus */
+    color: #ffffff; /* Optional: change text color on hover/focus */
+}
+/* Target the article within the post list */
+.post-list li article {
+    background-color: #1e2030; /* New background color */
+    padding: 1rem; /* You can adjust the padding as needed */
+    border-radius: 5px; /* This will maintain the rounded corners */
+    margin-bottom: 1rem; /* This adds some space between the posts */
+}
+/* Styling for the main article */
+main article {
+    background-color: #1e2030; /* New background color for the article */
+    padding: 20px; /* Add padding to create some space inside the box */
+    border-radius: 5px; /* If you want rounded corners */
+    margin-bottom: 20px; /* Add bottom margin for spacing between articles */
+}
+
+/* Styles for individual sections within the article */
+main article section {
+    background-color: #1e2030; /* New background color for sections within the article */
+    padding: 15px; /* Add padding to create some space inside the box */
+    border-radius: 5px; /* If you want rounded corners */
+    margin-bottom: 15px; /* Add bottom margin for spacing between sections */
+}
+
+/* Target the header within the article specifically */
+main article header {
+    background-color: #1e2030; /* New background color for the header */
+    padding: 20px; /* Add padding to create some space inside the header */
+    border-radius: 5px; /* If you want rounded corners */
+}
+
+/* Target the footer within the article */
+main article footer {
+    background-color: #1e2030; /* Sets the background color */
+    padding: 20px; /* Adjust padding to match header and content area */
+    /* Other styles if necessary */
+}
+
+/* Ensure consistent padding and margins */
+main article,
+main article header,
+main article section,
+main article footer {
+    padding: 20px; /* Or whatever value is needed for alignment */
+    margin: 0 auto; /* Centers the content, if applicable */
+}
+
+/* If the footer seems to be wider than the body text, it might be due to the padding or margin settings. Ensure they are the same. */
+main article {
+    padding: 20px; /* Adjust this to match your actual layout */
+    box-sizing: border-box; /* This ensures padding is included in the width */
+}
