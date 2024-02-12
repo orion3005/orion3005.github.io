@@ -42,10 +42,14 @@ input[type="submit"] {
     cursor: pointer; /* Changes cursor to pointer when hovering over submit button */
     background-color: #565190; /* Different background color for button to stand out */
 }
+button[type="submit"] {
+    cursor: pointer; /* Changes cursor to pointer when hovering over submit button */
+    background-color: #565190; /* Different background color for button to stand out */
+}
 textarea {
     resize: vertical; /* Allows vertical resize only */
     height: 150px; /* Initial height set for textarea */
-    background-color: #cad3f5;
+    background-color: #565190;
 
 }
 label {
