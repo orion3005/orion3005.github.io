@@ -57,7 +57,7 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
-.about-text-box {
+.text-box {
     background: linear-gradient(to right,
                         rgba(0, 0, 0, 0) 0%,
                         rgba(0, 0, 0, 0.8) 20%,
@@ -80,37 +80,11 @@ nav a:hover {
     height: auto; /* Set a height for the box */
     position: relative; /* Correct positioning type */
 }
-.text-box {
-    background: linear-gradient(to right,
-                        rgba(0, 0, 0, 0) 0%,
-                        rgba(0, 0, 0, 0.8) 20%,
-                        rgba(0, 0, 0, 0.8) 20%,
-                        rgba(0, 0, 0, 0.8) 80%,
-                        rgba(0, 0, 0, 0.8) 80%,
-                        rgba(0, 0, 0, 0) 100%);
-    color: white; /* Text color */
-    padding: 20px; /* Spacing inside the box */
-    margin: 0px auto; /* Spacing outside the box, centered horizontally */
-    width: auto;
-    max-width: 800px; /* You can set a max-width if you want */
-    box-sizing: border-box; /* To include padding in width calculation */
-    z-index: 1; /* Ensure it's above the background */
-    display: inline-flex; /* Enable flexbox */
-    justify-content: center; /* Center children horizontally */
-    align-items: center; /* Center children vertically */
-    text-align: center; /* Center text horizontally */
-    flex-direction: row; /* Stack children vertically */
-    height: auto; /* Set a height for the box */
-    position: relative; /* Correct positioning type */
-}
 .text-content {
     max-width: 80%; /* Matches the solid gradient portion */
     margin: 0 auto; /* Center the text container */
 }
 .text-box h1, .text-box p {
-    color: white; /* This will ensure all <h1> and <p> inside .text-box are white */
-}
-.about-text-box h1, .about-text-box p {
     color: white; /* This will ensure all <h1> and <p> inside .text-box are white */
 }
 .links-section {
