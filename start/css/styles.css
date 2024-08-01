@@ -462,3 +462,49 @@ body.dark-mode {
     max-height: 80%; /* Limit height */
     overflow-y: auto; /* Enable scrolling if content overflows */
 }
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#option-button {
+    position: absolute;
+    left: 5px;
+    padding: 5px 10px;
+    background-color: var(--primary-background-color);
+    border: 1px solid var(--primary-link-color);
+    border-radius: 3px;
+    cursor: default;
+    z-index: 1;
+    font-size: 0.9em;
+    color: var(--primary-font-color);
+}
+
+#option-button.hidden {
+    display: none;
+}
+
+#q {
+    padding-left: 10px; /* Default padding, adjusted dynamically by JavaScript */
+    width: calc(
+        100% - 20px
+    ); /* Adjust width to account for default padding and borders */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-link-color);
+}
+
+body.light-mode #option-button {
+    background-color: var(--color-bg-frappe);
+    border-color: var(--color-primary-frappe);
+    color: var(--color-text-frappe);
+}
+
+body.dark-mode #option-button {
+    background-color: var(--color-bg-macchiato);
+    border-color: var(--color-primary-macchiato);
+    color: var(--color-fg-macchiato);
+}
