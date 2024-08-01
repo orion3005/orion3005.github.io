@@ -27,6 +27,10 @@
                     <h2 class="sr-only">Date &amp; Time</h2>
                 </section>
                 <section id="world-clock">
+                    <div class="clock" id="clock-hawaii">
+                        <div class="city">HI</div>
+                        <div class="time" id="time-hawaii"></div>
+                    </div>
                     <div class="clock" id="clock-ny">
                         <div class="city">NYC</div>
                         <div class="time" id="time-ny"></div>
@@ -36,12 +40,8 @@
                         <div class="time" id="time-london"></div>
                     </div>
                     <div class="clock" id="clock-china">
-                        <div class="city">China</div>
+                        <div class="city">中国</div>
                         <div class="time" id="time-china"></div>
-                    </div>
-                    <div class="clock" id="clock-tokyo">
-                        <div class="city">Tokyo</div>
-                        <div class="time" id="time-tokyo"></div>
                     </div>
                 </section>
                 <section id="weather">
@@ -276,7 +276,7 @@
                         "clock-china": "Asia/Shanghai",
                         "clock-ny": "America/New_York",
                         "clock-london": "Europe/London",
-                        "clock-tokyo": "Asia/Tokyo",
+                        "clock-hawaii": "Pacific/Honolulu",
                     };
 
                     for (const [id, timeZone] of Object.entries(timeZones)) {
@@ -328,6 +328,9 @@
                 const rssFeedUrl = "https://rss2json.com/api.json?rss_url=";
                 const feedUrl =
                     "https://old.reddit.com/user/my-stinky-toes/m/basketball.rss"; // Replace with your RSS feed URL
+                let feedItems = [];
+                let currentFeedIndex = 0;
+                const itemsPerPage = 5;
 
                 function loadRSSFeed() {
                     fetch(rssFeedUrl + encodeURIComponent(feedUrl))
@@ -336,24 +339,57 @@
                             if (data.status !== "ok") {
                                 throw new Error("Error fetching RSS feed");
                             }
-                            const rssContent =
-                                document.getElementById("rss-content");
-                            // Limit to 5 items, for example
-                            const itemsToDisplay = data.items.slice(0, 50);
-                            rssContent.innerHTML = itemsToDisplay
-                                .map(
-                                    (item) => `
+                            feedItems = data.items;
+                            currentFeedIndex = 0; // Reset index
+                            displayRSSFeed();
+                            setupIntersectionObserver();
+                        })
+                        .catch((error) =>
+                            console.error("Error loading RSS feed:", error),
+                        );
+                }
+
+                function displayRSSFeed() {
+                    const rssContent = document.getElementById("rss-content");
+                    const itemsToDisplay = feedItems.slice(
+                        currentFeedIndex,
+                        currentFeedIndex + itemsPerPage,
+                    );
+                    rssContent.innerHTML += itemsToDisplay
+                        .map(
+                            (item) => `
                                 <div class="rss-item">
                                     <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
                                     <p>${item.description}</p>
                                 </div>
                             `,
-                                )
-                                .join("");
-                        })
-                        .catch((error) =>
-                            console.error("Error loading RSS feed:", error),
-                        );
+                        )
+                        .join("");
+                    currentFeedIndex += itemsPerPage;
+                }
+
+                function setupIntersectionObserver() {
+                    const rssContent = document.getElementById("rss-content");
+                    const observer = new IntersectionObserver(
+                        (entries) => {
+                            entries.forEach((entry) => {
+                                if (entry.isIntersecting) {
+                                    observer.unobserve(entry.target);
+                                    if (currentFeedIndex < feedItems.length) {
+                                        displayRSSFeed();
+                                        observer.observe(
+                                            rssContent.lastElementChild,
+                                        );
+                                    }
+                                }
+                            });
+                        },
+                        { root: null, rootMargin: "0px", threshold: 1.0 },
+                    );
+
+                    if (rssContent.lastElementChild) {
+                        observer.observe(rssContent.lastElementChild);
+                    }
                 }
 
                 // Toggle RSS feed visibility and load content
