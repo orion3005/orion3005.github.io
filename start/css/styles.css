@@ -430,3 +430,35 @@ body.dark-mode {
 #rss-icon {
     font-size: 1.2rem; /* Consistent size for icons */
 }
+
+.rss-item {
+    margin-bottom: 15px;
+}
+
+.rss-item h3 {
+    margin: 0;
+}
+
+.rss-item p {
+    margin: 5px 0 0;
+}
+
+.rss-feed-light {
+    background-color: var(--color-bg-frappe); /* Light theme background */
+    color: var(--catppuccin-frappe-text); /* Light theme text */
+}
+
+.rss-feed-dark {
+    background-color: var(--color-bg-macchiato); /* Dark theme background */
+    color: var(--catppuccin-macchiato-text); /* Dark theme text */
+}
+
+#rss-feed {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Ensure it's above other content */
+    max-width: 80%; /* Limit width */
+    max-height: 80%; /* Limit height */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}

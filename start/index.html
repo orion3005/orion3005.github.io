@@ -203,20 +203,9 @@
                         </li>
                     </ul>
 
-                    <div id="rss-feed" class="hidden overlay">
-                        <h2>RSS Feed</h2>
-                        <div id="rss-content">
-                            RSS feed content goes here...
-                        </div>
-                    </div>
-
-                    <div id="quick-notes" class="hidden overlay">
-                        <h2>Quick Notes</h2>
-                        <textarea
-                            id="notes"
-                            placeholder="Type your notes here..."
-                        ></textarea>
-                        <button id="save-notes">Save Notes</button>
+                    <div id="rss-feed" class="hidden overlay rss-feed-light">
+                        <h2>Feed</h2>
+                        <div id="rss-content"></div>
                     </div>
                 </section>
             </section>
@@ -229,17 +218,48 @@
                 </button>
             </section>
         </main>
-
         <script>
             document.addEventListener("DOMContentLoaded", () => {
+                // Time Zone Clock Update
+                function updateTime() {
+                    const timeZones = {
+                        "clock-china": "Asia/Shanghai",
+                        "clock-ny": "America/New_York",
+                        "clock-london": "Europe/London",
+                        "clock-tokyo": "Asia/Tokyo",
+                    };
+
+                    for (const [id, timeZone] of Object.entries(timeZones)) {
+                        const date = new Date().toLocaleString("en-US", {
+                            timeZone,
+                            hour: "numeric",
+                            minute: "numeric",
+                            hour12: false,
+                        });
+                        document.getElementById(
+                            `time-${id.split("-")[1]}`,
+                        ).textContent = date;
+                    }
+                }
+
+                setInterval(updateTime, 1000);
+                updateTime();
+
+                // Theme Switching
                 const themeSwitcher = document.getElementById("theme-switcher");
                 const themeIcon = document.getElementById("theme-icon");
+                const rssFeedContainer = document.getElementById("rss-feed");
                 const currentTheme =
                     localStorage.getItem("theme") || "light-mode";
 
                 document.body.classList.add(currentTheme);
                 themeIcon.textContent =
                     currentTheme === "light-mode" ? "☀" : "☽";
+                rssFeedContainer.classList.add(
+                    currentTheme === "light-mode"
+                        ? "rss-feed-light"
+                        : "rss-feed-dark",
+                );
 
                 themeSwitcher.addEventListener("click", () => {
                     const isLightMode =
@@ -250,72 +270,54 @@
                     localStorage.setItem("theme", newTheme);
                     themeIcon.textContent =
                         newTheme === "light-mode" ? "☀" : "☽";
+                    rssFeedContainer.classList.toggle("rss-feed-light");
+                    rssFeedContainer.classList.toggle("rss-feed-dark");
                 });
-            });
-        </script>
-        <script>
-            function updateTime() {
-                const timeZones = {
-                    "clock-china": "Asia/Shanghai",
-                    "clock-ny": "America/New_York",
-                    "clock-london": "Europe/London",
-                    "clock-tokyo": "Asia/Tokyo",
-                };
 
-                for (const [id, timeZone] of Object.entries(timeZones)) {
-                    const date = new Date().toLocaleString("en-US", {
-                        timeZone,
-                        hour: "numeric",
-                        minute: "numeric",
-                        hour12: false,
+                // RSS Feed
+                const rssFeedUrl = "https://rss2json.com/api.json?rss_url=";
+                const feedUrl =
+                    "https://old.reddit.com/user/my-stinky-toes/m/basketball.rss"; // Replace with your RSS feed URL
+
+                function loadRSSFeed() {
+                    fetch(rssFeedUrl + encodeURIComponent(feedUrl))
+                        .then((response) => response.json())
+                        .then((data) => {
+                            if (data.status !== "ok") {
+                                throw new Error("Error fetching RSS feed");
+                            }
+                            const rssContent =
+                                document.getElementById("rss-content");
+                            // Limit to 5 items, for example
+                            const itemsToDisplay = data.items.slice(0, 50);
+                            rssContent.innerHTML = itemsToDisplay
+                                .map(
+                                    (item) => `
+                                <div class="rss-item">
+                                    <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
+                                    <p>${item.description}</p>
+                                </div>
+                            `,
+                                )
+                                .join("");
+                        })
+                        .catch((error) =>
+                            console.error("Error loading RSS feed:", error),
+                        );
+                }
+
+                // Toggle RSS feed visibility and load content
+                document
+                    .getElementById("toggle-rss")
+                    .addEventListener("click", () => {
+                        toggleVisibility("rss-feed");
+                        loadRSSFeed();
                     });
-                    document.getElementById(
-                        `time-${id.split("-")[1]}`,
-                    ).textContent = date;
-                }
-            }
 
-            setInterval(updateTime, 1000);
-            updateTime();
-
-            // Function to toggle visibility
-            function toggleVisibility(elementId) {
-                const element = document.getElementById(elementId);
-                if (element.classList.contains("hidden")) {
-                    element.classList.remove("hidden");
-                } else {
-                    element.classList.add("hidden");
-                }
-            }
-
-            // Toggle RSS feed visibility
-            document
-                .getElementById("toggle-rss")
-                .addEventListener("click", () => {
-                    toggleVisibility("rss-feed");
-                });
-
-            // Toggle Quick Notes visibility
-            document
-                .getElementById("toggle-notes")
-                .addEventListener("click", () => {
-                    toggleVisibility("quick-notes");
-                });
-
-            // Save notes to localStorage
-            document
-                .getElementById("save-notes")
-                .addEventListener("click", () => {
-                    const notesContent = document.getElementById("notes").value;
-                    localStorage.setItem("quickNotes", notesContent);
-                    alert("Notes saved!");
-                });
-
-            // Load saved notes from localStorage
-            window.addEventListener("load", () => {
-                const savedNotes = localStorage.getItem("quickNotes");
-                if (savedNotes) {
-                    document.getElementById("notes").value = savedNotes;
+                // Function to toggle visibility
+                function toggleVisibility(elementId) {
+                    const element = document.getElementById(elementId);
+                    element.classList.toggle("hidden");
                 }
             });
         </script>
