@@ -560,3 +560,12 @@ body.dark-mode #option-button {
 .hidden {
     display: none;
 }
+
+.weather-link {
+    text-decoration: none;
+}
+
+.weather-link:hover,
+.weather-link:focus {
+    text-decoration: none;
+}

@@ -71,6 +71,26 @@
                     <h2 class="sr-only">Bookmarks</h2>
                     <ul>
                         <li>
+                            <a href="https://ankiweb.net/decks"
+                                ><img
+                                    src="https://icons.duckduckgo.com/ip3/ankiweb.net.ico"
+                                    class="favicon"
+                                    alt="Ankiweb favicon"
+                                />Anki</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://www.dong-chinese.com/dictionary"
+                                ><img
+                                    src="https://icons.duckduckgo.com/ip3/dong-chinese.com.ico"
+                                    class="favicon"
+                                    alt="Dong Chinese favicon"
+                                />懂中文</a
+                            >
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
                             <a href="https://mail.proton.me/u/0/inbox"
                                 ><img
                                     src="https://icons.duckduckgo.com/ip3/mail.proton.me.ico"
@@ -100,65 +120,6 @@
                     </ul>
                     <ul>
                         <li>
-                            <a href="https://openweathermap.org/city/5368361"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/openweathermap.org.ico"
-                                    class="favicon"
-                                    alt="OpenWeather favicon"
-                                />Weather</a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://ankiweb.net/decks"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/ankiweb.net.ico"
-                                    class="favicon"
-                                    alt="Ankiweb favicon"
-                                />Anki</a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://www.dong-chinese.com/dictionary"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/dong-chinese.com.ico"
-                                    class="favicon"
-                                    alt="Dong Chinese favicon"
-                                />懂中文</a
-                            >
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a
-                                href="https://www.openstreetmap.org/#map=5/38.007/-95.844"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/openstreetmap.org.ico"
-                                    class="favicon"
-                                    alt="OpenStreetMap favicon"
-                                />Maps</a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://www.github.com"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/github.com.ico"
-                                    class="favicon"
-                                    alt="Github favicon"
-                                />Github</a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://chat.onionhost.space:8443"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/chat.onionhost.space.ico"
-                                    class="favicon"
-                                    alt="OpenGPT favicon"
-                                />OpenGPT</a
-                            >
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
                             <a href="https://discord.com/channels/@me"
                                 ><img
                                     src="https://icons.duckduckgo.com/ip3/discord.com.ico"
@@ -183,6 +144,27 @@
                                     class="favicon"
                                     alt="Youtube favicon"
                                 />Invidious</a
+                            >
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://www.openstreetmap.org/#map=5/38.007/-95.844"
+                                ><img
+                                    src="https://icons.duckduckgo.com/ip3/openstreetmap.org.ico"
+                                    class="favicon"
+                                    alt="OpenStreetMap favicon"
+                                />Maps</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://www.github.com"
+                                ><img
+                                    src="https://icons.duckduckgo.com/ip3/github.com.ico"
+                                    class="favicon"
+                                    alt="Github favicon"
+                                />Github</a
                             >
                         </li>
                     </ul>
@@ -230,7 +212,7 @@
                     },
                     {
                         key: "ar",
-                        label: "Search with archive.org",
+                        label: "Search with Internet Archive",
                         prefix: "https://archive.org/search.php?query=",
                     },
                     {
@@ -401,8 +383,7 @@
 
                 // RSS Feed
                 const rssFeedUrl = "https://rss2json.com/api.json?rss_url=";
-                const feedUrl =
-                    "https://old.reddit.com/user/my-stinky-toes/m/basketball.rss"; // Replace with your RSS feed URL
+                const feedUrl = "https://old.reddit.com/r/nba.rss"; // Replace with your RSS feed URL
                 let feedItems = [];
                 let currentFeedIndex = 0;
                 const itemsPerPage = 5;
