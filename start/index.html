@@ -304,9 +304,10 @@
                     .addEventListener("submit", (event) => {
                         event.preventDefault();
                         let query = searchInput.value.trim();
-                        if (currentMode) {
+                        if (selectedIndex !== -1) {
                             window.location.href =
-                                prefix + encodeURIComponent(query);
+                                searchOptions[selectedIndex].prefix +
+                                encodeURIComponent(query);
                         } else {
                             window.location.href =
                                 "https://search.onionhost.space:8443/search?q=" +
@@ -337,7 +338,6 @@
                         updateDropdown();
                     }
                 });
-
                 // Time Zone Clock Update
                 function updateTime() {
                     const timeZones = {
