@@ -59,8 +59,8 @@
                     <h2 class="sr-only">Search</h2>
                     <form id="search-form" action="#" method="get">
                         <div class="search-container">
-                            <span id="option-button" class="hidden"></span>
                             <input type="text" id="q" name="q" autofocus />
+                            <div id="dropdown" class="hidden"></div>
                             <button type="submit" class="sr-only" tabindex="-1">
                                 Search
                             </button>
@@ -224,31 +224,78 @@
             document.addEventListener("DOMContentLoaded", () => {
                 // Search Bar Integrations
                 const searchInput = document.getElementById("q");
-                const optionButton = document.getElementById("option-button");
-                const body = document.body;
+                const dropdown = document.getElementById("dropdown");
+                const searchOptions = [
+                    {
+                        key: "d",
+                        label: "Search with SearXNG",
+                        prefix: "https://searxng.com/search?q=",
+                    },
+                    {
+                        key: "c",
+                        label: "Ask ChatGPT",
+                        prefix: "https://chatgpt.com/?q=",
+                    },
+                    {
+                        key: "ls",
+                        label: "请中文老师",
+                        prefix: "https://chatgpt.com/g/g-rXpCt4KNz-zhong-wen-lao-shi/?q=",
+                    },
+                ];
                 let currentMode = "";
                 let prefix = "";
+                let selectedIndex = -1;
 
                 searchInput.addEventListener("keydown", (event) => {
                     if (event.key === "Tab") {
                         event.preventDefault(); // Prevent default tab behavior
-                        const query = searchInput.value.trim().toLowerCase();
-                        if (query === "c") {
-                            currentMode = "cgpt";
-                            optionButton.textContent = "ChatGPT";
-                            optionButton.classList.remove("hidden");
-                            prefix = "https://chatgpt.com/?q=";
-                            searchInput.value = ""; // Clear the input for the query
-                            searchInput.style.paddingLeft = "100px"; // Adjust padding for button width
-                        } else if (query === "ls") {
-                            currentMode = "laoshi";
-                            optionButton.textContent = "中文老师";
-                            optionButton.classList.remove("hidden");
-                            prefix =
-                                "https://chatgpt.com/g/g-rXpCt4KNz-zhong-wen-lao-shi/?q=";
-                            searchInput.value = ""; // Clear the input for the query
-                            searchInput.style.paddingLeft = "100px"; // Adjust padding for button width
-                        }
+                        selectedIndex =
+                            (selectedIndex + 1) % searchOptions.length;
+                        updateDropdown();
+                    }
+                });
+
+                searchInput.addEventListener("input", () => {
+                    const query = searchInput.value.trim().toLowerCase();
+                    const matchedOption = searchOptions.find((option) =>
+                        query.startsWith(option.key),
+                    );
+                    if (matchedOption) {
+                        currentMode = matchedOption.key;
+                        prefix = matchedOption.prefix;
+                        selectedIndex = searchOptions.indexOf(matchedOption);
+                        updateDropdown();
+                    } else {
+                        currentMode = "";
+                        prefix = "";
+                        selectedIndex = -1;
+                        updateDropdown();
+                    }
+                });
+
+                searchInput.addEventListener("focus", updateDropdown);
+
+                function updateDropdown() {
+                    if (searchInput.value.trim()) {
+                        dropdown.innerHTML = searchOptions
+                            .map(
+                                (option, index) => `
+                            <div class="${index === selectedIndex ? "selected" : ""}" data-index="${index}">${option.label}</div>
+                        `,
+                            )
+                            .join("");
+                        dropdown.classList.remove("hidden");
+                    } else {
+                        dropdown.classList.add("hidden");
+                    }
+                }
+
+                document.addEventListener("click", (event) => {
+                    if (
+                        !searchInput.contains(event.target) &&
+                        !dropdown.contains(event.target)
+                    ) {
+                        dropdown.classList.add("hidden");
                     }
                 });
 
@@ -257,10 +304,7 @@
                     .addEventListener("submit", (event) => {
                         event.preventDefault();
                         let query = searchInput.value.trim();
-                        if (
-                            currentMode === "cgpt" ||
-                            currentMode === "laoshi"
-                        ) {
+                        if (currentMode) {
                             window.location.href =
                                 prefix + encodeURIComponent(query);
                         } else {
@@ -269,6 +313,30 @@
                                 encodeURIComponent(query);
                         }
                     });
+
+                // Add click event to dropdown items
+                dropdown.addEventListener("click", (event) => {
+                    const clickedItem = event.target;
+                    const index = clickedItem.getAttribute("data-index");
+                    if (index !== null) {
+                        selectedIndex = parseInt(index, 10);
+                        const selectedOption = searchOptions[selectedIndex];
+                        currentMode = selectedOption.key;
+                        prefix = selectedOption.prefix;
+                        searchInput.focus();
+                        updateDropdown();
+                    }
+                });
+
+                // Highlight on hover
+                dropdown.addEventListener("mouseover", (event) => {
+                    const hoveredItem = event.target;
+                    const index = hoveredItem.getAttribute("data-index");
+                    if (index !== null) {
+                        selectedIndex = parseInt(index, 10);
+                        updateDropdown();
+                    }
+                });
 
                 // Time Zone Clock Update
                 function updateTime() {
