@@ -383,10 +383,11 @@
 
                 // RSS Feed
                 const rssFeedUrl = "https://rss2json.com/api.json?rss_url=";
-                const feedUrl = "https://old.reddit.com/r/nba.rss"; // Replace with your RSS feed URL
+                const feedUrl =
+                    "https://old.reddit.com/r/FoodLosAngeles+LosAngeles+SoCalGardening+askphilosophy+capsulewardrobe+digitalminimalism+digitalnomad+dumbphones+eink+geography+minimalism+musichoarder+onebag+pasadena+privacy+selfhosted+simpleliving+socalhiking+startpages+unixporn.rss"; // Replace with your RSS feed URL
                 let feedItems = [];
                 let currentFeedIndex = 0;
-                const itemsPerPage = 5;
+                const itemsPerPage = 50;
 
                 function loadRSSFeed() {
                     fetch(rssFeedUrl + encodeURIComponent(feedUrl))
