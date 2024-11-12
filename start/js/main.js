@@ -311,3 +311,38 @@ document.addEventListener("DOMContentLoaded", () => {
     element.classList.toggle("hidden");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // All folders and subfolders start closed
+  const folders = document.querySelectorAll(".folder-content");
+  folders.forEach((folder) => {
+    folder.style.display = "none";
+  });
+
+  const subfolders = document.querySelectorAll(".subfolder-content");
+  subfolders.forEach((subfolder) => {
+    subfolder.style.display = "none";
+  });
+
+  // Add click event to each main folder header
+  const folderHeaders = document.querySelectorAll(".folder-header");
+  folderHeaders.forEach((header) => {
+    header.addEventListener("click", function () {
+      const folderId = this.getAttribute("data-folder");
+      const folderContent = document.getElementById(folderId);
+      folderContent.style.display =
+        folderContent.style.display === "block" ? "none" : "block";
+    });
+  });
+
+  // Add click event to each subfolder header
+  const subfolderHeaders = document.querySelectorAll(".subfolder-header");
+  subfolderHeaders.forEach((header) => {
+    header.addEventListener("click", function () {
+      const subfolderId = this.getAttribute("data-subfolder");
+      const subfolderContent = document.getElementById(subfolderId);
+      subfolderContent.style.display =
+        subfolderContent.style.display === "block" ? "none" : "block";
+    });
+  });
+});

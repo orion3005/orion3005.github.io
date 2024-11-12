@@ -579,3 +579,51 @@ body.dark-mode #option-button {
 .weather-link:focus {
     text-decoration: none;
 }
+
+/* Main folder header styling */
+.folder {
+    margin: 10px 0;
+}
+
+.folder-header {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #your-button-color;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    color: #your-text-color;
+    margin-right: 8px;
+}
+
+.folder-header:hover {
+    background-color: #hover-color;
+}
+
+.folder-content {
+    display: none; /* Initially hidden */
+    margin-left: 15px;
+}
+
+/* Subfolder styling */
+.folder-subheader {
+    font-weight: bold;
+    color: #subfolder-color;
+    margin-top: 10px;
+}
+
+/* Subfolder header styling */
+.subfolder-header {
+    cursor: pointer;
+    font-weight: bold;
+    color: #subfolder-color; /* Set a color for subfolder headers */
+    margin-top: 10px;
+    padding-left: 10px; /* Indent subfolder headers slightly */
+}
+
+/* Subfolder content styling */
+.subfolder-content {
+    display: none; /* Start closed */
+    margin-left: 20px;
+}

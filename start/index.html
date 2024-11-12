@@ -67,112 +67,188 @@
                 </section>
                 <section id="bookmarks">
                     <h2 class="sr-only">Bookmarks</h2>
-                    <ul>
-                        <li>
-                            <a href="https://ankiweb.net/decks"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/ankiweb.net.ico"
-                                    class="favicon"
-                                    alt="Ankiweb favicon"
-                                />Anki</a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://www.dong-chinese.com/dictionary"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/dong-chinese.com.ico"
-                                    class="favicon"
-                                    alt="Dong Chinese favicon"
-                                />懂中文</a
-                            >
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="https://app.tuta.com/login"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/app.tuta.com.ico"
-                                    class="favicon"
-                                    alt="Tuta favicon"
-                                />Tuta</a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://inv.tux.pizza/feed/subscriptions"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/youtube.com.ico"
-                                    class="favicon"
-                                    alt="Youtube favicon"
-                                />Invidious</a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://v2.sportsurge.net/list5-basketball"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/v2.sportsurge.net.ico"
-                                    class="favicon"
-                                    alt="Live Basketball favicon"
-                                />Live Basketball</a
-                            >
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="https://discord.com/channels/@me"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/discord.com.ico"
-                                    class="favicon"
-                                    alt="Discord favicon"
-                                />Discord</a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://open.spotify.com/?"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/spotify.com.ico"
-                                    class="favicon"
-                                    alt="Spotify favicon"
-                                />Spotify</a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://plaintextsports.com/nba?"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/plaintextsports.com.ico"
-                                    class="favicon"
-                                    alt="PTS favicon"
-                                />NBA Scores</a
-                            >
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a
-                                href="https://www.openstreetmap.org/#map=5/38.007/-95.844"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/openstreetmap.org.ico"
-                                    class="favicon"
-                                    alt="OpenStreetMap favicon"
-                                />Maps</a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://www.github.com"
-                                ><img
-                                    src="https://icons.duckduckgo.com/ip3/github.com.ico"
-                                    class="favicon"
-                                    alt="Github favicon"
-                                />Github</a
-                            >
-                        </li>
-                    </ul>
 
-                    <div id="rss-feed" class="hidden overlay rss-feed-light">
-                        <h2>Feed</h2>
-                        <div id="rss-content"></div>
+                    <!-- Folder 1: Learning Resources -->
+                    <div class="folder">
+                        <div class="folder-header" data-folder="folder1">Learning Resources</div>
+                        <ul id="folder1" class="folder-content">
+                            <li>
+                                <a href="https://ankiweb.net/decks">
+                                    <img src="https://icons.duckduckgo.com/ip3/ankiweb.net.ico" class="favicon" alt="Ankiweb favicon" />Anki
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.dong-chinese.com/dictionary">
+                                    <img src="https://icons.duckduckgo.com/ip3/dong-chinese.com.ico" class="favicon" alt="Dong Chinese favicon" />懂中文
+                                </a>
+                            </li>
+                        </ul>
                     </div>
+
+                    <!-- Folder 2: Feeds -->
+                    <div class="folder">
+                        <div class="folder-header" data-folder="folder2">Email & Feeds</div>
+                        <ul id="folder2" class="folder-content">
+                            <li>
+                                <a href="https://app.tuta.com/login">
+                                    <img src="https://icons.duckduckgo.com/ip3/app.tuta.com.ico" class="favicon" alt="Tuta favicon" />Tuta
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://old.reddit.com">
+                                    <img src="https://icons.duckduckgo.com/ip3/reddit.com.ico" class="favicon" alt="Reddit favicon" />Reddit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.github.com">
+                                    <img src="https://icons.duckduckgo.com/ip3/github.com.ico" class="favicon" alt="Github favicon" />Github
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Folder 3: Music & Media -->
+                    <div class="folder">
+                        <div class="folder-header" data-folder="folder3">Music & Media</div>
+                        <ul id="folder3" class="folder-content">
+                            <li>
+                                <a href="https://open.spotify.com/?">
+                                    <img src="https://icons.duckduckgo.com/ip3/spotify.com.ico" class="favicon" alt="Spotify favicon" />Spotify
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://archive.org">
+                                    <img src="https://icons.duckduckgo.com/ip3/archive.org.ico" class="favicon" alt="Archive favicon" />Archive.org
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.libgen.is/">
+                                    <img src="https://icons.duckduckgo.com/ip3/libgen.is.ico" class="favicon" alt="LibGen favicon" />LibGen
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Folder 4: Sports & Entertainment -->
+                    <div class="folder">
+                        <div class="folder-header" data-folder="folder4">Sports & Entertainment</div>
+                        <ul id="folder4" class="folder-content">
+                            <li>
+                                <a href="https://v2.sportsurge.net/list5-basketball">
+                                    <img src="https://icons.duckduckgo.com/ip3/v2.sportsurge.net.ico" class="favicon" alt="Live Basketball favicon" />Live Basketball
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://inv.tux.pizza/feed/subscriptions">
+                                    <img src="https://icons.duckduckgo.com/ip3/youtube.com.ico" class="favicon" alt="Invidious favicon" />Invidious
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plaintextsports.com/nba?">
+                                    <img src="https://icons.duckduckgo.com/ip3/plaintextsports.com.ico" class="favicon" alt="PTS favicon" />NBA Scores
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://fishkernba.com/">
+                                    <img src="https://icons.duckduckgo.com/ip3/fishkernba.com.ico" class="favicon" alt="NBA Replay favicon" />NBA Replay
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://steamdb.info/">
+                                    <img src="https://icons.duckduckgo.com/ip3/steamdb.info.ico" class="favicon" alt="SteamDB favicon" />SteamDB
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.protondb.com/">
+                                    <img src="https://icons.duckduckgo.com/ip3/protondb.com.ico" class="favicon" alt="ProtonDB favicon" />ProtonDB
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Folder 5: Tools -->
+                    <div class="folder">
+                        <div class="folder-header" data-folder="folder5">Tools</div>
+                        <ul id="folder5" class="folder-content">
+
+                            <!-- Subfolder: Networking -->
+                            <li class="subfolder-header" data-subfolder="networking">Networking</li>
+                            <ul id="networking" class="subfolder-content">
+                                <li>
+                                    <a href="https://www.iplocation.net/ip-lookup">
+                                        <img src="https://icons.duckduckgo.com/ip3/iplocation.net.ico" class="favicon" alt="IP Location favicon" />IP Lookup
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.speedtest.net/">
+                                        <img src="https://icons.duckduckgo.com/ip3/speedtest.net.ico" class="favicon" alt="Speedtest favicon" />Speedtest
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://mxtoolbox.com/">
+                                        <img src="https://icons.duckduckgo.com/ip3/mxtoolbox.com.ico" class="favicon" alt="MXToolbox favicon" />MXToolbox
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.ipqualityscore.com/vpn-ip-address-check">
+                                        <img src="https://icons.duckduckgo.com/ip3/ipqualityscore.com.ico" class="favicon" alt="IP Quality Score favicon" />VPN IP Check
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://massgrave.dev/windows_ltsc_links">
+                                        <img src="https://icons.duckduckgo.com/ip3/massgrave.dev.ico" class="favicon" alt="Massgrave favicon" />Windows LTSC Links
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <!-- Subfolder: Privacy -->
+                            <li class="subfolder-header" data-subfolder="privacy">Privacy</li>
+                            <ul id="privacy" class="subfolder-content">
+                                <li>
+                                    <a href="https://easyoptouts.com/">
+                                        <img src="https://via.placeholder.com/16?text=E" class="favicon" alt="E" />Easy Opt Outs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://veracrypt.eu/en/Downloads.html">
+                                        <img src="https://icons.duckduckgo.com/ip3/veracrypt.eu.ico" class="favicon" alt="VeraCrypt favicon" />VeraCrypt
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://tosdr.org/">
+                                        <img src="https://icons.duckduckgo.com/ip3/tosdr.org.ico" class="favicon" alt="ToS;DR favicon" />ToS;DR
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.amiunique.org/">
+                                        <img src="https://icons.duckduckgo.com/ip3/amiunique.org.ico" class="favicon" alt="Am I Unique favicon" />Am I Unique?
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://kagi.com/">
+                                        <img src="https://icons.duckduckgo.com/ip3/kagi.com.ico" class="favicon" alt="Kagi favicon" />Kagi
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- Subfolder: Location -->
+                            <li class="subfolder-header" data-subfolder="maps">Maps</li>
+                            <ul id="maps" class="subfolder-content">
+                                <li>
+                                    <a href="https://www.openstreetmap.org/#map=5/38.007/-95.844">
+                                        <img src="https://icons.duckduckgo.com/ip3/openstreetmap.org.ico" class="favicon" alt="OpenStreetMap favicon" />Maps
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.google.com/maps">
+                                        <img src="https://icons.duckduckgo.com/ip3/google.com.ico" class="favicon" alt="Google Maps favicon" />Google Maps
+                                    </a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+
                 </section>
-            </section>
+
             <section id="extra-features">
                 <button id="theme-switcher">
                     <span id="theme-icon">☀</span>
