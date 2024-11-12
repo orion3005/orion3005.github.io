@@ -96,7 +96,13 @@ document.addEventListener("DOMContentLoaded", () => {
       label: "Search with Baidu",
       prefix: "https://www.baidu.com/s?wd=",
     },
+    {
+      key: "k",
+      label: "Search with Kagi",
+      prefix: "https://kagi.com/search?q=", // Kagi search URL
+    },
   ];
+
   let currentMode = "";
   let prefix = "";
   let selectedIndex = -1;
