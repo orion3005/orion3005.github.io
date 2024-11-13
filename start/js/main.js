@@ -62,6 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
       prefix: "https://search.onionhost.space:8443/search?q=",
     },
     {
+      key: "k",
+      label: "Search with Kagi",
+      prefix: "https://kagi.com/search?q=", // Kagi search URL
+    },
+    {
       key: "c",
       label: "Ask ChatGPT",
       prefix: "https://chatgpt.com/?q=",
@@ -95,11 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
       key: "b",
       label: "Search with Baidu",
       prefix: "https://www.baidu.com/s?wd=",
-    },
-    {
-      key: "k",
-      label: "Search with Kagi",
-      prefix: "https://kagi.com/search?q=", // Kagi search URL
     },
   ];
 
