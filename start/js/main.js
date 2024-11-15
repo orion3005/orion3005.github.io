@@ -57,24 +57,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.getElementById("dropdown");
   const searchOptions = [
     {
-      key: "d",
-      label: "Search with SearXNG",
-      prefix: "https://search.onionhost.space:8443/search?q=",
-    },
-    {
       key: "k",
       label: "Search with Kagi",
       prefix: "https://kagi.com/search?q=", // Kagi search URL
     },
     {
+      key: "d",
+      label: "Search with SearXNG",
+      prefix: "https://searx.be/search?q=",
+    },
+    {
       key: "c",
       label: "Ask ChatGPT",
       prefix: "https://chatgpt.com/?q=",
-    },
-    {
-      key: "ls",
-      label: "问中文老师",
-      prefix: "https://chatgpt.com/g/g-rXpCt4KNz-zhong-wen-lao-shi/?q=",
     },
     {
       key: "lg",
