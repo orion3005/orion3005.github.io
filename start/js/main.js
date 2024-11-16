@@ -162,8 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
         searchOptions[selectedIndex].prefix + encodeURIComponent(query);
     } else {
       window.location.href =
-        "https://search.onionhost.space:8443/search?q=" +
-        encodeURIComponent(query);
+        "https://kagi.com/search?q=" + encodeURIComponent(query);
     }
   });
 
