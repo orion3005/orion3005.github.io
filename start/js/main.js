@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       key: "d",
       label: "Search with SearXNG",
-      prefix: "https://https://priv.au/search?q=",
+      prefix: "https://priv.au/search?q=",
     },
     {
       key: "c",
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
         searchOptions[selectedIndex].prefix + encodeURIComponent(query);
     } else {
       window.location.href =
-        "https://https://priv.au/search?q=" + encodeURIComponent(query);
+        "https://priv.au/search?q=" + encodeURIComponent(query);
     }
   });
 
