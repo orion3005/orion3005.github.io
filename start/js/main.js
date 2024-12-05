@@ -57,14 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.getElementById("dropdown");
   const searchOptions = [
     {
-      key: "k",
-      label: "Search with Kagi",
-      prefix: "https://kagi.com/search?q=", // Kagi search URL
-    },
-    {
       key: "d",
       label: "Search with SearXNG",
-      prefix: "https://searx.be/search?q=",
+      prefix: "https://https://priv.au/search?q=",
     },
     {
       key: "c",
@@ -162,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
         searchOptions[selectedIndex].prefix + encodeURIComponent(query);
     } else {
       window.location.href =
-        "https://kagi.com/search?q=" + encodeURIComponent(query);
+        "https://https://priv.au/search?q=" + encodeURIComponent(query);
     }
   });
 
